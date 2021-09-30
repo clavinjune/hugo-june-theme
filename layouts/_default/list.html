@@ -1,4 +1,14 @@
 {{ define "main" }}
+<main class="list" id="content">
+    {{ range .Paginator.Pages }}
+    <article>
+        <div class="title">{{ .Title }}</div>
+    </article>
+    {{ end }}
+</main>
+{{ end }}
+
+{{/*{{ define "main" }}
 <main>
 list
     <article>
@@ -25,4 +35,4 @@ list
     {{ end }}
     </ul>
 </main>
-{{ end }}
+{{ end }}*/}}

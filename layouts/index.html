@@ -1,55 +1,19 @@
 {{ define "main" }}
-<main id="content">
-    <div class="template" id="hi">{{ i18n "june.hi" }}</div>
-    <div class="template {{ if (eq .Site.Language.Lang "ja") }} reverse {{ end }}" id="name">
-        <span class="template" id="im">{{ i18n "june.im" }}</span>
-        <span class="template" id="author"> {{ .Site.Params.June.Author }} </span>
+<main class="index" id="content">
+    <div class="introduction" id="hi">{{ i18n "june.hi" }}</div>
+    <div class="introduction {{ if (eq .Site.Language.Lang "ja") }} reverse {{ end }}" id="name">
+        <span class="introduction" id="im">{{ i18n "june.im" }}</span>
+        <span class="introduction" id="author"> {{ .Site.Params.June.Author }} </span>
     </div>
     {{ range (index .Site.Data .Lang).june.intro }}
-        <div class="template md">{{ . | markdownify }}</div>
+        <div class="introduction md">{{ . | markdownify }}</div>
     {{ end }}
 
-    <div class="template" id="reach-me-on"> {{ i18n "june.reach-me-on" }}</div>
-    <div class="template" id="contact-list">
+    <div class="introduction" id="reach-me-on"> {{ i18n "june.reach-me-on" }}</div>
+    <div class="introduction" id="contact-list">
     {{ range .Site.Params.June.Contact }}
         <a href="{{ .URL }}" target="_blank">{{ .Name }}</a>
     {{ end }}
     </div>
 </main>
 {{ end }}
-
-
-{{/*{{ define "main" }}
-<main class="container mx-auto px-4 py-24 bg-gray-100">
-    <h1>Welcome to Hugo with Tailwind CSS</h1>
-    <div class="text-gray-500">This is an example site with Tailwind CSS 2</div>
-
-    <div id="content">
-    {{ range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-        </li>
-    {{ end }}
-
-
-    <div>page</div>
-    {{ range .Pages }}
-    <div>{{ . }} </div>
-    {{ end }}
-
-    <div>lang</div>
-    {{ range .Site.Languages }}
-      <a href="/{{ . }}">{{ . }}</a>
-    {{ end }}
-    </div>
-
-<ul>
-{{ range .Site.Home.AllTranslations }}
-<li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-{{ end }}
-
-{{ i18n "home" }}
-</ul>
-
-</main>
-{{ end }}*/}}

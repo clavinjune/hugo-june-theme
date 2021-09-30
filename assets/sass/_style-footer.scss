@@ -1,0 +1,13 @@
+footer {
+  align-items: center;
+  color: $black-04;
+  display: grid;
+  height: 60px;
+  justify-content: right;
+  width: 95%;
+
+  @media #{$phone-portrait} {
+    justify-content: center;
+    width: 100%; 
+  }
+}

@@ -1,0 +1,49 @@
+nav {
+  align-items: center;
+  color: $black-04;
+  display: grid;
+  line-height: 16px;
+  font-weight: bolder;
+  height: 70px;
+  justify-content: center;
+  width: 100%;
+
+  & > a#skip-to-content[href="#content"] {
+    border: solid 2px $black;
+    border-bottom-right-radius: 5px;
+    background-color: $red;
+    color: $white;
+    left: -100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+
+    &:focus {
+      height: auto;
+      left: 0px;
+      width: auto;
+    }
+  }
+
+  & > ul {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0;
+    padding: 0;
+    width: 240px;
+
+    & > li {
+      display: grid;
+      justify-content: center;
+      list-style: none;
+
+      & > a.active {
+        color: $black;
+      }
+
+      & > a:not(.active):hover {
+        color: $black-08;
+      }
+    }
+  }
+}

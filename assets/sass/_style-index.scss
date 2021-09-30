@@ -1,0 +1,62 @@
+main.index {
+  & div.introduction, span.introduction {
+    &#hi {
+      font-size: 18px;
+      font-weight: lighter;
+      line-height: 18px;
+    }
+
+    &#name {
+      margin: 15px 0;
+    }
+
+    &#im {
+      font-size: 24px;
+      line-height: 55px;
+    }
+
+    &#author {
+      font-family: $roboto-condensed;
+      font-size: 40px;
+      font-weight: bolder;
+      line-height: 50px;
+    }
+
+    &#reach-me-on {
+      font-weight: lighter;
+      margin-top: 25px;
+      margin-bottom: 5px;;
+    }
+
+    &#contact-list {
+      display: inline-grid;
+      grid-auto-flow: column;
+      grid-gap: 20px;
+      & > a {
+        font-family: $roboto-condensed;
+        font-size: 20px;
+        font-weight: bolder;
+        line-height: 24px;
+
+        border-bottom: solid 2px $red;
+      }
+    }
+
+    &.reverse {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      width: fit-content;
+    }
+
+    &.md {
+      display: block;
+      font-size: 20px;
+      line-height: 32px;
+
+      @media #{$phone-portrait} {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+}

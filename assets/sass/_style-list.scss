@@ -1,0 +1,10 @@
+main.list {
+  & > article {
+    & > div.title {
+      font-family: $roboto-condensed;
+      font-size: 40px;
+      font-weight: bolder;
+      line-height: 48px;
+    }
+  }
+}
