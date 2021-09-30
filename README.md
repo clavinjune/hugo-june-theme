@@ -9,3 +9,4 @@ Hugo June is a theme that created to serve multilingual personal site and blog. 
 
 ## Features
 - Skip To Content Button
+- Multilingual
