@@ -1,0 +1,160 @@
+@import "_colors.scss";
+@import "_fonts.scss";
+@import "_media-queries.scss";
+
+body, html {
+  color: $black;
+  display: grid;
+  font-family: $roboto;
+  font-size: 16px;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  grid-template-rows: 70px auto 60px;
+  grid-gap: 8%;
+}
+
+::selection { color: $red }
+::-moz-selection { color: $red }
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+
+  &#skip-to-content[href="#content"] {
+    border: solid 2px $black;
+    border-bottom-right-radius: 5px;
+    background-color: $red;
+    color: $white;
+    left: -100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+
+    &:focus {
+      height: auto;
+      left: 0px;
+      width: auto;
+    }
+  }
+}
+
+
+div.template, span.template {
+  &#hi {
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 18px;
+  }
+
+  &#name {
+    margin: 15px 0;
+  }
+
+  &#im {
+    font-size: 24px;
+    line-height: 55px;
+  }
+
+  &#author {
+    font-family: $roboto-condensed;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 50px;
+  }
+
+  &#reach-me-on {
+    font-weight: lighter;
+    margin-top: 25px;
+    margin-bottom: 5px;;
+  }
+
+  &#contact-list {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    & > a {
+      font-family: $roboto-condensed;
+      font-size: 20px;
+      font-weight: bolder;
+      line-height: 24px;
+
+      border-bottom: solid 2px $red;
+    }
+  }
+
+  &.reverse {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: fit-content;
+  }
+
+  &.md {
+    display: block;
+    font-size: 20px;
+    line-height: 32px;
+
+    @media #{$phone-portrait} {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}
+
+nav {
+  align-items: center;
+  color: $black-04;
+  display: grid;
+  line-height: 16px;
+  font-weight: bolder;
+  height: 70px;
+  justify-content: center;
+  width: 100%;
+
+  & > ul {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0;
+    padding: 0;
+    width: 240px;
+
+    & > li {
+      display: grid;
+      justify-content: center;
+      list-style: none;
+
+      & > a.active {
+        color: $black;
+      }
+
+      & > a:not(.active):hover {
+        color: $black-08;
+      }
+    }
+  }
+}
+
+main {
+  margin: 0px 20%;
+
+  @media #{$phone-portrait} {
+    margin: 0px 5%;
+  }
+}
+
+footer {
+  align-items: center;
+  color: $black-04;
+  display: grid;
+  height: 60px;
+  justify-content: right;
+  width: 95%;
+
+  @media #{$phone-portrait} {
+    justify-content: center;
+    width: 100%; 
+  }
+}

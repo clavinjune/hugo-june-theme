@@ -1,0 +1,4 @@
+{{- if .Site.Params.June.BraveRewardsVerification -}}
+{{- $tpl := resources.Get "txt/brave-rewards-verification.txt" -}}
+{{- $style := $tpl | resources.ExecuteAsTemplate ".well-known/brave-rewards-verification.txt" .Site  -}}
+{{- end -}}

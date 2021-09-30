@@ -1,0 +1,14 @@
+<nav>
+    <a id="skip-to-content" href="#content">Skip to content</a>
+    <ul>
+    {{- $currentPage := . -}}
+    {{- $currentPageURL := $currentPage.RelPermalink | absLangURL -}}
+    {{- range .Site.Menus.main -}}
+    {{- $url := .URL | absLangURL -}}
+    {{- if (eq $currentPageURL $url) -}}
+    <li><a class="active">{{ .Name }}</a></li>
+    {{- else -}}
+    <li><a href="{{ $url }}">{{ .Name }}</a></li>
+    {{- end -}}
+    {{- end -}}
+</ul></nav>

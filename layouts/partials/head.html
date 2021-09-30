@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatbile" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {{- with .Site.Params.June }}
+  {{- if .author }}
+  <meta name="author" content="{{ .author }}" />
+  {{- end }}
+  {{- if .googleSiteVerification }}
+  <meta name="google-site-verification" content="{{ .googleSiteVerification}}" />
+  {{- end }}
+  {{- if .monetization }}
+  <meta name="monetization" content="{{ .monetization }}" />
+  {{- end }}
+  {{- end }}
+
+  <meta property="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />  
+  <meta property="og:locale" content="{{ .Site.Params.Locale }}" />
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  
+  <title>{{ .Title }}</title>
+
+  {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $style := resources.Get "sass/style.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+</head>

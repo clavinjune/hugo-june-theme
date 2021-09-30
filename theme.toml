@@ -1,0 +1,26 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "June"
+license = "MIT"
+licenselink = "https://github.com/ClavinJune/hugo-june-theme/blob/master/LICENSE"
+description = "A simple multilingual personal site and blogs"
+homepage = "https://clavinjune.dev/works/hugo-june-theme"
+tags = [
+  "minimal",
+  "light",
+  "personal",
+  "blog",
+  "multilingual",
+  "responsive"
+]
+features = [
+  "blog",
+  "multilingual",
+  "skip-to-content"
+]
+min_version = "0.88.1"
+
+[author]
+  name = "Clavin June"
+  homepage = "https://clavinjune.dev"
