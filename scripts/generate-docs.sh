@@ -15,12 +15,14 @@ DESCRIPTION="$(stoml theme.toml description)"
 TARGET="/tmp/readme-${RANDOM}"
 
 hugo new site "$TARGET" &> /dev/null
-cp "README.md" "$TARGET/content"
+cp "README.md" "$TARGET/content/index.md"
 
 cd "$TARGET"
 
 cat <<EOF > "config.toml"
 baseURL = '$HOMEPAGE/'
+disableKinds = ["taxonomy", "terms"]
+ignoreErrors = ["error-disable-taxonomy"]
 title = '$TITLE'
 theme = 'readme'
 
@@ -37,4 +39,6 @@ cd - &> /dev/null
 
 mkdir -p "docs/"
 cp "$TARGET/public/index.html" "docs/index.html"
+cp "$TARGET/public/index.xml" "docs/index.xml"
+cp "$TARGET/public/sitemap.xml" "docs/sitemap.xml"
 rm -rf "$TARGET"
