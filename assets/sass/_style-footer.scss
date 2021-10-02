@@ -7,6 +7,7 @@ footer {
   width: 95%;
 
   @media #{$phone-portrait} {
+    font-size: 14px;
     justify-content: center;
     width: 100%; 
   }

@@ -29,11 +29,3 @@ a {
   text-decoration: none;
 }
 
-main {
-  margin: 0px 20%;
-
-  @media #{$phone-portrait} {
-    margin: 0px 5%;
-  }
-}
-

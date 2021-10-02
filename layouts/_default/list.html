@@ -1,9 +1,7 @@
 {{ define "main" }}
 <main class="list" id="content">
     {{ range .Paginator.Pages }}
-    <article>
-        <div class="title">{{ .Title }}</div>
-    </article>
+    {{ .Render "summary" }}
     {{ end }}
 </main>
 {{ end }}

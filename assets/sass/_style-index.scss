@@ -1,4 +1,10 @@
 main.index {
+  margin: 0px 20%;
+
+  @media #{$phone-portrait} {
+    margin: 0px 5%;
+  }
+
   & div.introduction, span.introduction {
     &#hi {
       font-size: 18px;
@@ -23,15 +29,21 @@ main.index {
     }
 
     &#reach-me-on {
+      font-size: 18px;
       font-weight: lighter;
       margin-top: 25px;
-      margin-bottom: 5px;;
+      margin-bottom: 5px;
+
+      @media #{$phone-portrait} {
+        font-size: 14px;
+        line-height: 26px;
+      }
     }
 
     &#contact-list {
       display: inline-grid;
       grid-auto-flow: column;
-      grid-gap: 20px;
+      grid-gap: 15px;
       & > a {
         font-family: $roboto-condensed;
         font-size: 20px;
@@ -39,6 +51,11 @@ main.index {
         line-height: 24px;
 
         border-bottom: solid 2px $red;
+
+        @media #{$phone-portrait} {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
     }
 

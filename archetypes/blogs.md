@@ -4,5 +4,5 @@ date: {{ .Date }}
 description: ""
 draft: true
 iscjklanguage: false
-tags: []
+tags: ["other"]
 ---
