@@ -5,7 +5,7 @@ name = "June"
 license = "MIT"
 licenselink = "https://github.com/ClavinJune/hugo-june-theme/blob/master/LICENSE"
 description = "A simple multilingual personal site and blogs"
-homepage = "https://clavinjune.dev/works/hugo-june-theme"
+homepage = "https://hugo.clavinjune.dev"
 tags = [
   "minimal",
   "light",
