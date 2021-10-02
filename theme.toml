@@ -1,7 +1,7 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "June"
+name = "Hugo June Theme"
 license = "MIT"
 licenselink = "https://github.com/ClavinJune/hugo-june-theme/blob/master/LICENSE"
 description = "A simple multilingual personal site and blogs"

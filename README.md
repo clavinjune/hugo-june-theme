@@ -5,7 +5,7 @@
 [![GitHub](https://img.shields.io/github/license/ClavinJune/hugo-june-theme)](https://github.com/ClavinJune/hugo-june-theme/blob/master/LICENSE)
 [![Work In Progress](https://img.shields.io/static/v1?label=Work+In+Progress&message=true&color=green&logo=github)](#)
 
-![Hugo June Theme Example](docs/images/example.png)
+![Hugo June Theme Example](https://hugo.ClavinJune.dev/images/example.png)
 
 Hugo June is a theme that created to serve multilingual personal site and blog. The design itself is created by [Jessi](https://munyaaa.github.io/) and implemented by [June](https://clavinjune.dev). By default, Hugo June has supported English, Indonesian, and Japanese. All the configuration could be modified by adjusting the built-in `config file`, `i18n directory`, and `data directory`.
 
