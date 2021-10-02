@@ -7,7 +7,7 @@
 
 ![Hugo June Theme Example](https://hugo.ClavinJune.dev/images/example.png)
 
-Hugo June is a theme that created to serve multilingual personal site and blog. The design itself is created by [Jessi](https://munyaaa.github.io/) and implemented by [June](https://clavinjune.dev). By default, Hugo June has supported English, Indonesian, and Japanese. All the configuration could be modified by adjusting the built-in `config file`, `i18n directory`, and `data directory`.
+Hugo June is a theme that created to serve multilingual personal site and blog. The design itself is created by [Jessi](https://munyaaa.github.io/) and implemented by [Clavin June](https://clavinjune.dev). By default, Hugo June has supported English, Indonesian, and Japanese. All the configuration could be modified by adjusting the built-in `config file`, `i18n directory`, and `data directory`.
 
 ## Features
 - Skip to Content Button
