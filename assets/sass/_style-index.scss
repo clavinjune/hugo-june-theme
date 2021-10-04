@@ -1,5 +1,7 @@
 main.index {
   margin: 0px 20%;
+  display: grid;
+  justify-content: center;
 
   @media #{$phone-portrait} {
     margin: 0px 5%;
@@ -44,6 +46,8 @@ main.index {
       display: inline-grid;
       grid-auto-flow: column;
       grid-gap: 15px;
+      width: max-content;
+      
       & > a {
         font-family: $roboto-condensed;
         font-size: 20px;

@@ -3,5 +3,19 @@
     {{ range .Paginator.Pages }}
     {{ .Render "summary" }}
     {{ end }}
+    <div class="pagination">
+        {{ if .Paginator.HasPrev }}
+            <a class="nav active" href="{{ .Paginator.Prev.URL }}">Prev</a>
+        {{ else }}
+            <a class="nav">Prev</a>
+        {{ end }}
+        <span class="page"><span>{{ .Paginator.PageNumber }}</span> of {{ .Paginator.TotalPages }}</span>
+        {{ if .Paginator.HasNext }}
+            <a class="nav active" href="{{ .Paginator.Next.URL }}">Next</a>
+        {{ else }}
+            <a class="nav">Next</a>
+        {{ end }}
+        
+</div>
 </main>
 {{ end }}

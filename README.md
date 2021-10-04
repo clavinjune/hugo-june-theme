@@ -15,5 +15,9 @@ Hugo June is a theme that created to serve multilingual personal site and blog. 
 - Google Site Verification Meta Tag
 - Web Monetization Meta Tag
 - Brave Rewards Verification File
+- Minimalist
+- Simple
+- Responsive
+- Grid System CSS
 - Deferred CSS
-- Deferred Google Analytics
+- Deferred Javascript
