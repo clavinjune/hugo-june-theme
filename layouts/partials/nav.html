@@ -2,9 +2,9 @@
     <a id="skip-to-content" href="#content">Skip to content</a>
     <ul id="menu">
     {{- $currentPage := . -}}
-    {{- $currentPageURL := $currentPage.RelPermalink | absLangURL -}}
+    {{- $currentPageURL := $currentPage.RelPermalink | relLangURL -}}
     {{- range .Site.Menus.main -}}
-    {{- $url := .URL | absLangURL -}}
+    {{- $url := .URL | relLangURL -}}
     {{- if (eq $currentPageURL $url) -}}
     <li><a class="active">{{ .Name }}</a></li>
     {{- else -}}

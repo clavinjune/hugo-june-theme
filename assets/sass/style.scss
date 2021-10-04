@@ -5,22 +5,25 @@
 @import "_style-footer.scss";
 @import "_style-index.scss";
 @import "_style-list.scss";
+@import "_style-summary.scss";
 
-::selection { color: $red }
-::-moz-selection { color: $red }
+::selection,::-moz-selection { color: $red }
 
 body, html {
   color: $black;
   display: grid;
   font-family: $roboto;
   font-size: 16px;
-  grid-gap: 8%;
+  grid-row-gap: 8%;
   grid-template-rows: 70px auto 60px;
   margin: 0;
   min-height: 100vh;
   padding: 0;
   scroll-behavior: smooth;
 
+  @media #{$phone-portrait} {
+    grid-row-gap: 8%;
+  }
 }
 
 a {

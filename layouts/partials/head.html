@@ -20,7 +20,13 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   
-  <title>{{ .Title }}</title>
+  {{- with .Title }}
+    {{- if (ne $.Site.Title .)}}
+    <title>{{ $.Site.Title }} - {{ . }}</title>
+    {{- else }}
+    <title>{{ . }}</title>
+    {{- end }}
+  {{- end}}
 
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
   {{ $style := resources.Get "sass/style.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}

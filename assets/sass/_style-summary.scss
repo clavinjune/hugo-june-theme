@@ -1,0 +1,49 @@
+article.summary {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 10px;
+  font-family: $roboto-condensed;
+
+  & > a.title {
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 48px;
+
+    @media #{$phone-portrait} {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  & > div.description {
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    font-family: $roboto;
+    font-size: 20px;
+    line-height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
+    @media #{$phone-portrait} {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  & a.readmore {
+    border-bottom: solid 2px $red;
+    font-family: $roboto-condensed;
+    font-weight: bolder;
+    line-height: 20px;
+    width: max-content;
+    margin-top: -1%;
+
+    @media #{$phone-portrait} {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

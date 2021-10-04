@@ -6,3 +6,6 @@
 
 [june.reach-me-on]
   other = "Hubungi saya di"
+
+[june.reading-time]
+  other = "~{{ .Count }} menit"

@@ -6,3 +6,6 @@
 
 [june.reach-me-on]
   other = "Reach me on"
+
+[june.reading-time]
+  other = "~{{ .Count }} min"

@@ -6,3 +6,6 @@
 
 [june.reach-me-on]
   other = "こちらに連絡してください"
+
+[june.reading-time]
+  other = "~{{ .Count }}分"
