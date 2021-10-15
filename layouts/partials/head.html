@@ -39,7 +39,5 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
   </noscript>
 
-  {{- with .Site.GoogleAnalytics }}
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-  {{- end }}
+  <link rel="canonical" href="{{ .Site.BaseURL }}">
 </head>
