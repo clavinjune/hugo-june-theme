@@ -4,17 +4,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {{- with .Site.Params.June }}
-  {{- if .csp }}
-  <meta http-equiv="Content-Security-Policy" content="{{ .csp }}">
+  {{- with .author }}
+  <meta name="author" content="{{ . }}" />
   {{- end }}
-  {{- if .author }}
-  <meta name="author" content="{{ .author }}" />
+  {{- with .canonicalURL }}
+  <link rel="canonical" href="{{ . }}" />
   {{- end }}
-  {{- if .googleSiteVerification }}
-  <meta name="google-site-verification" content="{{ .googleSiteVerification}}" />
+  {{- with .csp }}
+  <meta http-equiv="Content-Security-Policy" content="{{ . }}" />
   {{- end }}
-  {{- if .monetization }}
-  <meta name="monetization" content="{{ .monetization }}" />
+  {{- with .googleSiteVerification }}
+  <meta name="google-site-verification" content="{{ . }}" />
+  {{- end }}
+  {{- with .monetization }}
+  <meta name="monetization" content="{{ . }}" />
   {{- end }}
   {{- end }}
 
@@ -38,6 +41,4 @@
   <noscript>
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
   </noscript>
-
-  <link rel="canonical" href="{{ .Site.BaseURL }}">
 </head>
