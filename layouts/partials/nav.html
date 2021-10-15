@@ -5,11 +5,7 @@
     {{- $currentPageURL := $currentPage.RelPermalink | relLangURL -}}
     {{- range .Site.Menus.main -}}
     {{- $url := .URL | relLangURL -}}
-    {{- if (eq $currentPageURL $url) -}}
-    <li><a class="active">{{ .Name }}</a></li>
-    {{- else -}}
-    <li><a href="{{ $url }}">{{ .Name }}</a></li>
-    {{- end -}}
+    <li><a {{ if (eq $currentPageURL $url) }}class="active"{{ end }} href="{{ $url }}">{{ .Name }}</a></li>
     {{- end -}}
     </ul>
 </nav>

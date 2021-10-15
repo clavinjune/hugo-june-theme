@@ -12,7 +12,7 @@
     <div class="introduction" id="reach-me-on"> {{ i18n "june.reach-me-on" }}</div>
     <div class="introduction" id="contact-list">
     {{ range .Site.Params.June.Contact }}
-        <a href="{{ .URL }}" target="_blank">{{ .Name }}</a>
+        <a rel="noopener" href="{{ .URL }}" target="_blank">{{ .Name }}</a>
     {{ end }}
     </div>
 </main>
