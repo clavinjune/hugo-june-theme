@@ -3,6 +3,7 @@
     {{ range .Paginator.Pages }}
     {{ .Render "summary" }}
     {{ end }}
+    
     <div class="pagination">
         {{ if .Paginator.HasPrev }}
             <a class="nav active" href="{{ .Paginator.Prev.URL }}">Prev</a>
@@ -15,7 +16,6 @@
         {{ else }}
             <a class="nav">Next</a>
         {{ end }}
-        
-</div>
+    </div>
 </main>
 {{ end }}
