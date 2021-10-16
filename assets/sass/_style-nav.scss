@@ -1,7 +1,6 @@
 nav {
   align-items: center;
-  // color: $black-04;
-  color: $black-08;
+  color: $black-0675;
   display: grid;
   line-height: 16px;
   font-weight: bolder;
@@ -39,12 +38,11 @@ nav {
       list-style: none;
 
       & > a.active {
-        // color: $black;
-        color: $red;
+        color: $black;
       }
 
       & > a:not(.active):hover {
-        color: $black;
+        color: $black-08;
       }
     }
   }
