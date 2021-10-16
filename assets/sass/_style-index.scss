@@ -46,6 +46,7 @@ main.index {
       display: inline-grid;
       grid-auto-flow: column;
       grid-gap: 15px;
+      height: max-content;
       width: max-content;
       
       & > a {
@@ -66,11 +67,10 @@ main.index {
     &.reverse {
       display: inline-flex;
       flex-direction: row-reverse;
-      width: fit-content;
+      width: max-content;
     }
 
     &.md {
-      display: block;
       font-size: 20px;
       line-height: 32px;
 

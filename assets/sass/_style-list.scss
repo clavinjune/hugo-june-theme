@@ -17,6 +17,7 @@ main.list {
     grid-gap: 10px;
     grid-template-columns: repeat(3, max-content);
     justify-content: center;
+    line-height: 28px;
 
 
     & > span.current {
