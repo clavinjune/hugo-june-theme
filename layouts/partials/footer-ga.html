@@ -3,7 +3,10 @@
 <script defer>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ . }}');
+
+  setTimeout(() => {
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+  }, 2500)
 </script>
 {{- end -}}
