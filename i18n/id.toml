@@ -9,3 +9,9 @@
 
 [june.reading-time]
   other = "~{{ .Count }} menit"
+
+[june.prev]
+  other = "Sebelumnya"
+
+[june.next]
+  other = "Selanjutnya"

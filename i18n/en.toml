@@ -9,3 +9,9 @@
 
 [june.reading-time]
   other = "~{{ .Count }} min"
+
+[june.prev]
+  other = "Prev"
+
+[june.next]
+  other = "Next"

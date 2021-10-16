@@ -9,3 +9,9 @@
 
 [june.reading-time]
   other = "~{{ .Count }}分"
+
+[june.prev]
+  other = "前"
+
+[june.next]
+  other = "次"
