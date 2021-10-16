@@ -37,8 +37,5 @@
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
   {{ $style := resources.Get "sass/style.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
 
-  <link rel="preload" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
-  </noscript>
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
 </head>

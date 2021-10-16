@@ -1,12 +1,6 @@
 {{- with .Site.GoogleAnalytics -}}
+{{ $options := (dict "outputStyle" "compressed" "minify" true) }}
+{{ $js := resources.Get "js/ga.js" | js.Build $options | resources.ExecuteAsTemplate "js/ga.js" . }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-<script defer>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  setTimeout(() => {
-    gtag('js', new Date());
-    gtag('config', '{{ . }}');
-  }, 2500)
-</script>
 {{- end -}}

@@ -18,6 +18,3 @@ Hugo June is a theme that created to serve multilingual personal site and blog. 
 - Minimalist
 - Simple
 - Responsive
-- Grid System CSS
-- Deferred CSS
-- Deferred Javascript
