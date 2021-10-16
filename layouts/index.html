@@ -5,9 +5,12 @@
         <span class="introduction" id="im">{{ i18n "june.im" }}</span>
         <span class="introduction" id="author"> {{ .Site.Params.June.Author }} </span>
     </div>
+
+    <p>
     {{ range (index .Site.Data .Lang).june.intro }}
-        <div class="introduction md">{{ . | markdownify }}</div>
+        <span class="introduction md">{{ . | markdownify }}</span>
     {{ end }}
+    </p>
 
     <div class="introduction" id="reach-me-on"> {{ i18n "june.reach-me-on" }}</div>
     <div class="introduction" id="contact-list">

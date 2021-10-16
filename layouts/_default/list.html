@@ -6,15 +6,15 @@
     
     <div class="pagination">
         {{ if .Paginator.HasPrev }}
-            <a class="nav active" href="{{ .Paginator.Prev.URL }}">Prev</a>
+            <a class="nav active" href="{{ .Paginator.Prev.URL }}">{{ i18n "june.prev"}}</a>
         {{ else }}
-            <a class="nav">Prev</a>
+            <a class="nav">{{ i18n "june.prev"}}</a>
         {{ end }}
         <span class="page"><span>{{ .Paginator.PageNumber }}</span> of {{ .Paginator.TotalPages }}</span>
         {{ if .Paginator.HasNext }}
-            <a class="nav active" href="{{ .Paginator.Next.URL }}">Next</a>
+            <a class="nav active" href="{{ .Paginator.Next.URL }}">{{ i18n "june.next"}}</a>
         {{ else }}
-            <a class="nav">Next</a>
+            <a class="nav">{{ i18n "june.next"}}</a>
         {{ end }}
     </div>
 </main>
