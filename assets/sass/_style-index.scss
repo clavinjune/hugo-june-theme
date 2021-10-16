@@ -1,7 +1,7 @@
 main.index {
-  margin: 0px 20%;
   display: grid;
   justify-content: center;
+  margin: 0px 20%;
 
   @media #{$phone-portrait} {
     margin: 0px 5%;
