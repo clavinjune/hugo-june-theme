@@ -1,0 +1,62 @@
+main.single {
+  margin: 0 20%;
+
+  @media #{$phone-portrait} {
+    grid-row-gap: 35px;
+    margin: -10% 5% 0;
+  }
+
+  & > h1.title {
+    font-family: $roboto-condensed;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 48px;
+    margin-top: 0;
+
+    @media #{$phone-portrait} {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  & > div.metadata { 
+    display: grid;
+    font-family: $roboto-condensed;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    width: max-content;
+
+    @media #{$phone-portrait} {
+      grid-column-gap: 5px;
+    }
+
+    & > a.category {
+      font-style: italic;
+      font-weight: bolder;
+    }
+
+    & span.middot { font-weight: bolder }
+  }
+
+  & > div#content {
+    display: grid;
+    margin-top: 20px;
+    max-width: 100%;
+
+    & > pre,code,div.gist {
+      overflow-x: scroll;
+    }
+
+    & > figure {
+      margin: 0;
+      padding: 0;
+
+      & > figcaption {
+        color: $black-0675;
+        font-family: $roboto-condensed;
+        font-style: italic;
+        text-align: center;
+      }
+    }
+  }
+}

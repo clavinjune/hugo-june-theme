@@ -10,13 +10,10 @@ main.index {
   & div.introduction, span.introduction {
     &#hi {
       font-size: 18px;
-      font-weight: lighter;
       line-height: 18px;
     }
 
-    &#name {
-      margin: 15px 0;
-    }
+    &#name { margin: 15px 0 }
 
     &#im {
       font-size: 24px;
@@ -26,13 +23,11 @@ main.index {
     &#author {
       font-family: $roboto-condensed;
       font-size: 40px;
-      font-weight: bolder;
       line-height: 50px;
     }
 
     &#reach-me-on {
       font-size: 18px;
-      font-weight: lighter;
       margin-top: 25px;
       margin-bottom: 5px;
 
@@ -52,10 +47,7 @@ main.index {
       & > a {
         font-family: $roboto-condensed;
         font-size: 20px;
-        font-weight: bolder;
         line-height: 24px;
-
-        border-bottom: solid 2px $red;
 
         @media #{$phone-portrait} {
           font-size: 16px;

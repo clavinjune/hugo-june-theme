@@ -1,7 +1,7 @@
 main.list {
   display: grid;
   grid-row-gap: 50px;
-  margin: 0 25%;
+  margin: 0 20%;
   height: max-content;
 
   @media #{$phone-portrait} {
@@ -13,27 +13,12 @@ main.list {
     color: $black-04;
     display: grid;
     font-family: $roboto-condensed;
-    font-size: 16px;
     grid-gap: 10px;
     grid-template-columns: repeat(3, max-content);
     justify-content: center;
-    line-height: 28px;
-
 
     & > span.current {
       color: $black;
-    }
-    & > span.page > span {
-        color: $black;
-        font-weight: bolder;
-    }
-
-    & > a.nav {
-      font-weight: bolder;
-      &.active {
-        border-bottom: solid 2px $red;
-        color: $black;
-      }
     }
   }
 }

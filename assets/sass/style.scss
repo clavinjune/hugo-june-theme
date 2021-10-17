@@ -6,6 +6,7 @@
 @import "_style-index.scss";
 @import "_style-list.scss";
 @import "_style-not-found.scss";
+@import "_style-single.scss";
 @import "_style-summary.scss";
 
 ::selection { color: $red }
@@ -34,3 +35,18 @@ a {
   text-decoration: none;
 }
 
+.bottom-red { border-bottom: solid 2px $red }
+.fg-black { color: $black }
+
+.fg-bold { font-weight: bolder }
+.fg-light { font-weight: lighter }
+
+.font-16 {
+  font-size: 16px;
+  line-height: 24px;
+
+  @media #{$phone-portrait} {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
