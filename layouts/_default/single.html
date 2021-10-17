@@ -1,5 +1,28 @@
 {{ define "main" }}
-<main>
+{{ $cat := "other" }}
+{{ with .Params.Categories }}{{ $cat = (index . 0) }}{{ end }}
+{{ $catURL := printf "/categories/%s" $cat | urlize | relLangURL }}
+
+<main class="single">
+    <h1 class="title">{{ .Title }}</h1>
+    <div class="metadata font-16">
+        <a class="category" href="{{ $catURL }}">{{ $cat }}</a>
+        <span class="middot">&middot;</span>
+        <span>{{ .Date | time.Format ":date_medium" }}</span>
+        <span class="middot">&middot;</span>
+        <span>{{ i18n  "june.reading-time" .ReadingTime }}</span>
+    </div>
+
+    <div id="content">
+        {{ .Content }}
+    </div>
+</main>
+{{ end }}
+
+{{/* 
+
+<main class="blog single">
+    <h1 class="title">{{ .Title }}</h1>
     single
     <article>
         <header>
@@ -18,4 +41,4 @@
 
     {{ i18n "home" }}
 </main>
-{{ end }}
+*/}}

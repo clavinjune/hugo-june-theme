@@ -4,17 +4,17 @@
     {{ .Render "summary" }}
     {{ end }}
     
-    <div class="pagination">
+    <div class="font-16 pagination">
         {{ if .Paginator.HasPrev }}
-            <a class="nav active" href="{{ .Paginator.Prev.URL }}">{{ i18n "june.prev"}}</a>
+            <a class="nav fg-bold fg-black bottom-red" href="{{ .Paginator.Prev.URL }}">{{ i18n "june.prev"}}</a>
         {{ else }}
-            <a class="nav">{{ i18n "june.prev"}}</a>
+            <a class="nav fg-bold">{{ i18n "june.prev"}}</a>
         {{ end }}
-        <span class="page"><span>{{ .Paginator.PageNumber }}</span> of {{ .Paginator.TotalPages }}</span>
+        <span><span class="fg-black fg-bold">{{ .Paginator.PageNumber }}</span> of {{ .Paginator.TotalPages }}</span>
         {{ if .Paginator.HasNext }}
-            <a class="nav active" href="{{ .Paginator.Next.URL }}">{{ i18n "june.next"}}</a>
+            <a class="nav fg-bold fg-black bottom-red" href="{{ .Paginator.Next.URL }}">{{ i18n "june.next"}}</a>
         {{ else }}
-            <a class="nav">{{ i18n "june.next"}}</a>
+            <a class="nav fg-bold">{{ i18n "june.next"}}</a>
         {{ end }}
     </div>
 </main>

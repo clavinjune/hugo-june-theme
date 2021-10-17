@@ -1,11 +1,17 @@
-<nav>
+<nav class="fg-bold">
     <a id="skip-to-content" href="#content">Skip to content</a>
     <ul id="menu">
-    {{- $currentPage := . -}}
-    {{- $currentPageURL := $currentPage.RelPermalink | relLangURL -}}
+    {{- $thisURL := .RelPermalink | relLangURL -}}
+    {{- $csURL := .CurrentSection.RelPermalink | relLangURL -}}
+
     {{- range .Site.Menus.main -}}
     {{- $url := .URL | relLangURL -}}
-    <li><a {{ if (eq $currentPageURL $url) }}class="active"{{ end }} href="{{ $url }}">{{ .Name }}</a></li>
+
+    {{- if (or (eq $thisURL $url) (eq $csURL $url)) -}}
+    <li><a class="active" href="{{ $url }}">{{ .Name }}</a></li>
+    {{- else -}}
+    <li><a  href="{{ $url }}">{{ .Name }}</a></li>
+    {{- end -}}
     {{- end -}}
     </ul>
 </nav>
