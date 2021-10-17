@@ -1,4 +1,9 @@
-<figure style="display: grid; justify-items: center;grid-gap: 10px">
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Text }}" width="80%" />
-  <figcaption>{{ .Text }}</figcaption>
+{{- $title := .Title -}}
+{{ if not .Title}}
+  {{ $title = .PlainText }}
+{{end}}
+
+<figure>
+  <img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" title="{{ $title }}" width="100%" />
+  <figcaption>{{ safeHTML .Text }}</figcaption>
 </figure>

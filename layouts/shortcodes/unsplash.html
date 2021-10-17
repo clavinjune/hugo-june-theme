@@ -1,0 +1,26 @@
+{{- $src := .Get "src" -}}
+
+{{- $user := .Get "user" -}}
+{{- if (and $user (not (hasPrefix $user "@"))) -}}
+  {{- $user = printf "@%s" $user -}}
+{{- end -}}
+
+{{- $w := .Get "w" -}}
+{{- if not $w }}
+  {{- $w = "1920" }}
+{{- end }}
+
+{{- $q := .Get "q" -}}
+{{- if not $q -}}
+  {{- $q = "50" -}}
+{{- end -}}
+
+{{ $userRef := printf "<a class=\"unsplash-ref\" rel=\"nofollow noopener\" target=\"_blank\" href=\"https://unsplash.com/%s\">%s</a>" $user $user }}
+{{ $src := printf "https://images.unsplash.com/%s?w=%s&q=%s" $src $w $q}}
+{{ $alt := printf "Photo by %s on Unsplash" $user}}
+{{ $cap := printf "Photo by %s on Unsplash" $userRef}}
+
+<figure>
+  <img src="{{ $src | safeURL }}" alt="{{ $alt }}" title="{{ $alt }}" width="100%" />
+  <figcaption class="font-16">{{ safeHTML $cap }}</figcaption>
+</figure>
