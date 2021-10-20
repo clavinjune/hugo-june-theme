@@ -15,7 +15,7 @@
   {{- $q = "50" -}}
 {{- end -}}
 
-{{ $userRef := printf "<a class=\"unsplash-ref\" rel=\"nofollow noopener\" target=\"_blank\" href=\"https://unsplash.com/%s\">%s</a>" $user $user }}
+{{ $userRef := printf "<a class=\"link unsplash-ref\" rel=\"nofollow noopener\" target=\"_blank\" href=\"https://unsplash.com/%s\">%s</a>" $user $user }}
 {{ $src := printf "https://images.unsplash.com/%s?w=%s&q=%s" $src $w $q}}
 {{ $alt := printf "Photo by %s on Unsplash" $user}}
 {{ $cap := printf "Photo by %s on Unsplash" $userRef}}

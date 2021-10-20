@@ -1,3 +1,15 @@
+{{ define "head" }}
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.onload=null,this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+</noscript>
+
+{{ $options := (dict "targetPath" "css/single.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/single.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
+
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+{{ end }}
+
 {{ define "main" }}
 {{ $cat := "other" }}
 {{ with .Params.Categories }}{{ $cat = (index . 0) }}{{ end }}
@@ -13,32 +25,12 @@
         <span>{{ i18n  "june.reading-time" .ReadingTime }}</span>
     </div>
 
-    <div id="content">
-        {{ .Content }}
-    </div>
+    <div id="content">{{ .Content }}</div>
 </main>
 {{ end }}
 
-{{/* 
-
-<main class="blog single">
-    <h1 class="title">{{ .Title }}</h1>
-    single
-    <article>
-        <header>
-            <h1>{{.Title}}</h1>
-        </header>
-        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
-        {{.Content}}
-    </article>
-
-
-    {{ range .Translations }}
-    <li>
-        <a href="{{ .RelPermalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}</a>
-    </li>
-    {{ end }}
-
-    {{ i18n "home" }}
-</main>
-*/}}
+{{ define "script" }}
+{{ $options := (dict "outputStyle" "compressed" "minify" true) }}
+{{ $js := resources.Get "js/copy.js" | js.Build $options | resources.ExecuteAsTemplate "js/copy.js" . }}
+<script defer type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+{{ end }}

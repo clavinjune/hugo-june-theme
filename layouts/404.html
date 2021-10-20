@@ -1,3 +1,10 @@
+{{ define "head"}}
+{{ $options := (dict "targetPath" "css/not-found.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/not-found.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
+
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+
+{{ end }}
 {{ define "main" }}
 <main class="not-found" id="content">404</main>
 {{ end }}

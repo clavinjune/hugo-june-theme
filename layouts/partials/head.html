@@ -1,51 +1,49 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatbile" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatbile" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {{- with .Site.Params.June }}
-  {{- with .author }}
-  <meta name="author" content="{{ . }}" />
-  {{- end }}
-  {{- with .canonicalURL }}
-  <link rel="canonical" href="{{ . }}" />
-  {{- end }}
-  {{- with .csp }}
-  <meta http-equiv="Content-Security-Policy" content="{{ . }}" />
-  {{- end }}
-  {{- with .googleSiteVerification }}
-  <meta name="google-site-verification" content="{{ . }}" />
-  {{- end }}
-  {{- with .monetization }}
-  <meta name="monetization" content="{{ . }}" />
-  {{- end }}
-  {{- end }}
+{{- with .Site.Params.June }}
+{{- with .author }}
+<meta name="author" content="{{ . }}" />
+{{- end }}
+{{- with .canonicalURL }}
+<link rel="canonical" href="{{ . }}" />
+{{- end }}
+{{- with .csp }}
+<meta http-equiv="Content-Security-Policy" content="{{ . }}" />
+{{- end }}
+{{- with .googleSiteVerification }}
+<meta name="google-site-verification" content="{{ . }}" />
+{{- end }}
+{{- with .monetization }}
+<meta name="monetization" content="{{ . }}" />
+{{- end }}
+{{- end }}
 
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />  
-  <meta property="og:locale" content="{{ .Site.Params.Locale }}" />
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
-  
-  {{- with .Title }}
-    {{- if (ne $.Site.Title .)}}
-    <title>{{ $.Site.Title }} - {{ . }}</title>
-    {{- else }}
-    <title>{{ . }}</title>
-    {{- end }}
-  {{- end}}
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />  
+<meta property="og:locale" content="{{ .Site.Params.Locale }}" />
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
 
-  {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $style := resources.Get "sass/style.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
+{{- with .Title }}
+  {{- if (ne $.Site.Title .)}}
+  <title>{{ $.Site.Title }} - {{ . }}</title>
+  {{- else }}
+  <title>{{ . }}</title>
+  {{- end }}
+{{- end}}
 
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  {{- with .Site.GoogleAnalytics -}}
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  {{- end -}}
+{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/style.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap" as="style" onload="this.onload=null,this.rel='stylesheet'">
-  <noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap">
-  </noscript>
-</head>
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{- with .Site.GoogleAnalytics -}}
+<link rel="preconnect" href="https://www.googletagmanager.com">
+{{- end -}}
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap" as="style" onload="this.onload=null,this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap">
+</noscript>

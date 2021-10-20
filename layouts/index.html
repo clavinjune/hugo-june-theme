@@ -1,3 +1,10 @@
+{{ define "head"}}
+{{ $options := (dict "targetPath" "css/index.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/index.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
+
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+
+{{ end }}
 {{ define "main" }}
 <main class="index" id="content">
     <div class="introduction fg-light" id="hi">{{ i18n "june.hi" }}</div>

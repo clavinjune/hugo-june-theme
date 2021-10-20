@@ -1,0 +1,79 @@
+@import "_colors.scss";
+@import "_fonts.scss";
+@import "_media-queries.scss";
+
+main.index {
+    display: grid;
+    justify-content: center;
+    margin: 0px 20%;
+  
+    @media #{$phone-portrait} {
+      margin: 0px 5%;
+    }
+  
+    & div.introduction, span.introduction {
+      &#hi {
+        font-size: 18px;
+        line-height: 18px;
+      }
+  
+      &#name { margin: 15px 0 }
+  
+      &#im {
+        font-size: 24px;
+        line-height: 55px;
+      }
+  
+      &#author {
+        font-family: $roboto-condensed;
+        font-size: 40px;
+        line-height: 50px;
+      }
+  
+      &#reach-me-on {
+        font-size: 18px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+  
+        @media #{$phone-portrait} {
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+  
+      &#contact-list {
+        display: inline-grid;
+        grid-auto-flow: column;
+        grid-gap: 15px;
+        height: max-content;
+        width: max-content;
+        
+        & > a {
+          font-family: $roboto-condensed;
+          font-size: 20px;
+          line-height: 24px;
+  
+          @media #{$phone-portrait} {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+  
+      &.reverse {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        width: max-content;
+      }
+  
+      &.md {
+        font-size: 20px;
+        line-height: 32px;
+  
+        @media #{$phone-portrait} {
+          font-size: 16px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
