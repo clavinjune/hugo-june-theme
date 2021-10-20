@@ -15,13 +15,13 @@
         {{ if .Paginator.HasPrev }}
             <a class="nav fg-bold fg-black bottom-red" href="{{ .Paginator.Prev.URL }}">{{ i18n "june.prev"}}</a>
         {{ else }}
-            <a class="nav fg-bold">{{ i18n "june.prev"}}</a>
+            <a class="nav fg-bold" href="#">{{ i18n "june.prev"}}</a>
         {{ end }}
         <span><span class="fg-black fg-bold">{{ .Paginator.PageNumber }}</span> of {{ .Paginator.TotalPages }}</span>
         {{ if .Paginator.HasNext }}
             <a class="nav fg-bold fg-black bottom-red" href="{{ .Paginator.Next.URL }}">{{ i18n "june.next"}}</a>
         {{ else }}
-            <a class="nav fg-bold">{{ i18n "june.next"}}</a>
+            <a class="nav fg-bold" href="#">{{ i18n "june.next"}}</a>
         {{ end }}
     </div>
 </main>

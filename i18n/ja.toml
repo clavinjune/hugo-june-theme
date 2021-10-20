@@ -15,3 +15,6 @@
 
 [june.next]
   other = "次"
+
+[june.read-more]
+  other = 'さらに読む'
