@@ -140,4 +140,16 @@ main.single {
       }
     }
   }
+
+  & > div.separator {
+    display: grid;
+    font-family: $fira;
+    font-size: 20px;
+    font-weight: bolder;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+    justify-content: center;
+    line-height: 40px;
+    user-select: none;
+  }
 }

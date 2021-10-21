@@ -26,6 +26,20 @@
     </div>
 
     <div id="content">{{ .Content }}</div>
+
+    <div class="separator">
+        <span>&middot;</span>
+        <span>&middot;</span>
+        <span>&middot;</span>
+    </div>
+    
+    {{- $related := .Site.RegularPages.Related . | first 2 -}}
+    {{ with $related }}
+        <span>Related Articles</span>
+        {{ range . }}
+        <a class="link" href="{{ .RelPermalink }}">{{.Title}}</a>
+        {{ end }}
+    {{ end }}
 </main>
 {{ end }}
 
