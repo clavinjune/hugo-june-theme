@@ -10,7 +10,7 @@
     <div class="introduction fg-light" id="hi">{{ i18n "june.hi" }}</div>
     <div class="introduction {{ if (eq .Site.Language.Lang "ja") }} reverse {{ end }}" id="name">
         <span class="introduction" id="im">{{ i18n "june.im" }}</span>
-        <span class="introduction fg-bold" id="author"> {{ .Site.Params.June.Author }} </span>
+        <span class="introduction fg-bold" id="author"> {{ .Site.Author.name }} </span>
     </div>
 
     <p>
