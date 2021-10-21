@@ -1,0 +1,16 @@
+{{ with .Site.Params.June.comment }}
+<h2 class="subtitle">Drop Your Comments Below</h2>
+<script defer src="https://giscus.app/client.js"
+    data-repo="{{ .Repo }}"
+    data-repo-id="{{ .RepoID }}"
+    data-category="{{ .Category }}"
+    data-category-id="{{ .CategoryID }}"
+    data-mapping="{{ .Mapping }}"
+    data-reactions-enabled="{{ .Reaction }}"
+    data-emit-metadata="{{ .Metadata }}"
+    data-theme="{{ .Theme }}"
+    crossorigin="anonymous"
+    async>
+</script>
+
+{{ end }}

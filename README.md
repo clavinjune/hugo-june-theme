@@ -20,3 +20,4 @@ Hugo June is a theme that created to serve multilingual personal site and blog. 
 - Responsive
 - Custom Shortcodes
 - Content Security Policy Support
+- Giscus Support Comment Section
