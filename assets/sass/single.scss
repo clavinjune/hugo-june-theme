@@ -58,8 +58,8 @@ main.single {
 
       & code {
         border-radius: 5px;
-        background-color: $red-02;
-        font-family: $roboto;
+        background-color: $red-01;
+        font-family: $fira;
         padding: 5px;
       }
     }
@@ -71,7 +71,7 @@ main.single {
     }
 
     & blockquote {
-      background-color: $red-02;
+      background-color: $black-01;
       border-left: solid 3px $red;
       font-style: italic;
       margin: 0;
@@ -115,7 +115,7 @@ main.single {
         height: max-content;
         padding: 15px;
 
-        & > span { cursor: pointer }
+        & > span#copy { cursor: pointer }
       }
 
       & code {
