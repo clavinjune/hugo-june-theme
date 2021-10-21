@@ -114,6 +114,8 @@ main.single {
         font-family: $roboto-condensed;
         height: max-content;
         padding: 15px;
+        text-align: center;
+        width: 7ch;
 
         & > span#copy { cursor: pointer }
       }

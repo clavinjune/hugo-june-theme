@@ -23,5 +23,9 @@ document.addEventListener('click', e => {
             previousElementSibling.
             querySelector("table > tbody > tr > :nth-child(2)").
             textContent.trim())
+        e.target.innerHTML = 'copied!'
+        setTimeout(() => {
+            e.target.innerHTML = 'copy'
+        }, 1000)
     }
   })
