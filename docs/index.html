@@ -13,14 +13,15 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Hugo June Theme">
 <meta name=twitter:description content="A simple multilingual personal site and blogs">
-<link rel=apple-touch-icon sizes=180x180 href=https://gohugo.io//apple-touch-icon.png>
-<link rel=icon type=image/png href=https://gohugo.io/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=https://gohugo.io//favicon-16x16.png sizes=16x16>
 <title>Hugo June Theme</title>
 <link rel=preload href=https://unpkg.com/@primer/css@^16.0.0/dist/primer.css as=style onload="this.onload=null,this.rel='stylesheet'">
 <noscript>
 <link rel=stylesheet href=https://unpkg.com/@primer/css@^16.0.0/dist/primer.css>
 </noscript>
+
+<link rel=apple-touch-icon sizes=180x180 href=https://gohugo.io//apple-touch-icon.png>
+<link rel=icon type=image/png href=https://gohugo.io/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=https://gohugo.io//favicon-16x16.png sizes=16x16>
 </head>
 <body>
 <div class="container-lg px-3 my-5 markdown-body">
@@ -41,7 +42,175 @@
 <li>Minimalist</li>
 <li>Simple</li>
 <li>Responsive</li>
+<li>Custom Shortcodes</li>
+<li>Content Security Policy Support</li>
+<li>Giscus Support Comment Section</li>
 </ul>
+<h2 id=config-example>Config Example</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>baseURL</span> = <span style=color:#e6db74>&#39;https://clavinjune.dev&#39;</span>
+<span style=color:#a6e22e>canonifyURLs</span> = <span style=color:#66d9ef>true</span>
+<span style=color:#a6e22e>enableEmoji</span> = <span style=color:#66d9ef>true</span>
+<span style=color:#a6e22e>defaultContentLanguage</span> = <span style=color:#e6db74>&#39;en&#39;</span>
+<span style=color:#a6e22e>defaultContentLanguageInSubdir</span> = <span style=color:#66d9ef>true</span>
+<span style=color:#a6e22e>enableMissingTranslationPlaceholders</span> = <span style=color:#66d9ef>true</span>
+<span style=color:#a6e22e>enableRobotsTXT</span> = <span style=color:#66d9ef>true</span>
+<span style=color:#a6e22e>googleAnalytics</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
+<span style=color:#a6e22e>hasCJKLanguage</span> = <span style=color:#66d9ef>true</span>
+<span style=color:#a6e22e>languageCode</span> = <span style=color:#e6db74>&#39;en-us&#39;</span>
+<span style=color:#a6e22e>paginate</span> = <span style=color:#ae81ff>5</span>
+<span style=color:#a6e22e>publishDir</span> = <span style=color:#e6db74>&#39;docs&#39;</span>
+<span style=color:#a6e22e>title</span> = <span style=color:#e6db74>&#39;June Personal Web&#39;</span>
+<span style=color:#a6e22e>theme</span> = <span style=color:#e6db74>&#39;june&#39;</span>
+
+[<span style=color:#a6e22e>markup</span>]
+  [<span style=color:#a6e22e>markup</span>.<span style=color:#a6e22e>tableOfContents</span>]
+    <span style=color:#a6e22e>endLevel</span> = <span style=color:#ae81ff>3</span>
+    <span style=color:#a6e22e>ordered</span> = <span style=color:#66d9ef>true</span>
+    <span style=color:#a6e22e>startLevel</span> = <span style=color:#ae81ff>1</span>
+  [<span style=color:#a6e22e>markup</span>.<span style=color:#a6e22e>highlight</span>]
+    <span style=color:#a6e22e>anchorLineNos</span> = <span style=color:#66d9ef>true</span>
+    <span style=color:#a6e22e>codeFences</span> = <span style=color:#66d9ef>true</span>
+    <span style=color:#a6e22e>guessSyntax</span> = <span style=color:#66d9ef>true</span>
+    <span style=color:#a6e22e>lineNos</span> = <span style=color:#66d9ef>true</span>
+    <span style=color:#a6e22e>lineNumbersInTable</span> = <span style=color:#66d9ef>true</span>
+    <span style=color:#a6e22e>style</span> = <span style=color:#e6db74>&#39;vs&#39;</span>
+    <span style=color:#a6e22e>tabWidth</span> = <span style=color:#ae81ff>4</span>
+  
+[<span style=color:#a6e22e>taxonomies</span>]
+  <span style=color:#a6e22e>category</span> = <span style=color:#e6db74>&#39;categories&#39;</span>
+
+[<span style=color:#a6e22e>languages</span>]
+  [<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>en</span>]
+    <span style=color:#a6e22e>contentDir</span> = <span style=color:#e6db74>&#39;content/en&#39;</span>
+    <span style=color:#a6e22e>languageName</span> = <span style=color:#e6db74>&#39;English&#39;</span>
+    <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>1</span>
+    [<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>en</span>.<span style=color:#a6e22e>params</span>]
+    <span style=color:#a6e22e>description</span> = <span style=color:#e6db74>&#39;Clavin June Personal Web&#39;</span>
+    <span style=color:#a6e22e>locale</span> = <span style=color:#e6db74>&#34;en_US&#34;</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>en</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;HOME&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>1</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>en</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;BLOG&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/blogs/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>2</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>en</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;PODCAST&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/podcasts/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>3</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>en</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;WORK&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/works/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>4</span>
+
+  [<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>id</span>]
+    <span style=color:#a6e22e>contentDir</span> = <span style=color:#e6db74>&#39;content/id&#39;</span>
+    <span style=color:#a6e22e>languageName</span> = <span style=color:#e6db74>&#39;Bahasa Indonesia&#39;</span>
+    <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>2</span>
+    [<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>params</span>]
+      <span style=color:#a6e22e>description</span> = <span style=color:#e6db74>&#39;Clavin June Personal Web&#39;</span>
+      <span style=color:#a6e22e>locale</span> = <span style=color:#e6db74>&#34;id_ID&#34;</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;HOME&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>1</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;BLOG&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/blogs/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>2</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;SINIAR&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/podcasts/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>3</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;KARYA&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/works/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>4</span>
+
+  [<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>ja</span>]
+    <span style=color:#a6e22e>contentDir</span> = <span style=color:#e6db74>&#39;content/ja&#39;</span>
+    <span style=color:#a6e22e>languageName</span> = <span style=color:#e6db74>&#39;日本語&#39;</span>
+    <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>3</span>
+    [<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>ja</span>.<span style=color:#a6e22e>params</span>]
+      <span style=color:#a6e22e>description</span> = <span style=color:#e6db74>&#39;Clavin June Personal Web&#39;</span>
+      <span style=color:#a6e22e>locale</span> = <span style=color:#e6db74>&#34;ja_JP&#34;</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>ja</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;ホーム&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>1</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>ja</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;ブログ&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/blogs/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>2</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>ja</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;ポード&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/podcasts/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>3</span>
+
+    [[<span style=color:#a6e22e>languages</span>.<span style=color:#a6e22e>ja</span>.<span style=color:#a6e22e>menu</span>.<span style=color:#a6e22e>main</span>]]
+      <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#39;作品&#39;</span>
+      <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#39;/works/&#39;</span>
+      <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>4</span>
+
+[<span style=color:#a6e22e>author</span>]
+  <span style=color:#a6e22e>Name</span> = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+  <span style=color:#a6e22e>Email</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
+
+[<span style=color:#a6e22e>params</span>]
+  [<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>]
+    <span style=color:#a6e22e>braveRewardsVerification</span> = <span style=color:#e6db74>&#39;ze0dec1b3acfbd430cac887ce390fdefcb56679334fcd39bc49d434660a52e26c&#39;</span>
+    <span style=color:#a6e22e>canonicalURL</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
+    <span style=color:#a6e22e>csp</span> = <span style=color:#e6db74>&#34;default-src &#39;self&#39; &#39;unsafe-inline&#39; https:; object-src &#39;none&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39; fonts.googleapis.com github.githubassets.com; font-src fonts.gstatic.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; www.googletagmanager.com gist.github.com giscus.app; base-uri &#39;none&#39;; img-src &#39;self&#39; images.unsplash.com;&#34;</span>
+    <span style=color:#a6e22e>googleSiteVerification</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
+    <span style=color:#a6e22e>monetization</span> = <span style=color:#e6db74>&#39;$ilp.uphold.com/XXXXX&#39;</span>
+
+    [[<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>.<span style=color:#a6e22e>support</span>]]
+      <span style=color:#a6e22e>Name</span> = <span style=color:#e6db74>&#39;Bitcoin&#39;</span>
+      <span style=color:#a6e22e>URL</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
+
+    [[<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>.<span style=color:#a6e22e>support</span>]]
+      <span style=color:#a6e22e>Name</span> = <span style=color:#e6db74>&#39;Ko-fi&#39;</span>
+      <span style=color:#a6e22e>URL</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
+
+    [[<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>.<span style=color:#a6e22e>support</span>]]
+      <span style=color:#a6e22e>Name</span> = <span style=color:#e6db74>&#39;Trakteer&#39;</span>
+      <span style=color:#a6e22e>URL</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
+
+    [[<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>.<span style=color:#a6e22e>contact</span>]]
+      <span style=color:#a6e22e>Name</span> = <span style=color:#e6db74>&#34;Email&#34;</span>
+      <span style=color:#a6e22e>URL</span>  = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+
+    [[<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>.<span style=color:#a6e22e>contact</span>]]
+      <span style=color:#a6e22e>Name</span> = <span style=color:#e6db74>&#34;Github&#34;</span>
+      <span style=color:#a6e22e>URL</span>  = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+
+    [[<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>.<span style=color:#a6e22e>contact</span>]]
+      <span style=color:#a6e22e>Name</span> = <span style=color:#e6db74>&#34;LinkedIn&#34;</span>
+      <span style=color:#a6e22e>URL</span>  = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+      
+    <span style=color:#75715e># get from https://giscus.app/</span>
+    [<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>.<span style=color:#a6e22e>giscus</span>]
+      <span style=color:#a6e22e>Repo</span> =  <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+      <span style=color:#a6e22e>RepoID</span> = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+      <span style=color:#a6e22e>Category</span> = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+      <span style=color:#a6e22e>CategoryID</span> = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+      <span style=color:#a6e22e>Mapping</span> = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+      <span style=color:#a6e22e>Reaction</span> = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+      <span style=color:#a6e22e>Metadata</span> = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+      <span style=color:#a6e22e>Theme</span> = <span style=color:#e6db74>&#34;XXXXX&#34;</span>
+</code></pre></div>
 <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
 Copyright &copy; 2021 &#183; Clavin June
 </div>
