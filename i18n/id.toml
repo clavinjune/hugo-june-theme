@@ -18,3 +18,12 @@
 
 [june.read-more]
   other = 'Baca Lebih Lanjut'
+
+[june.love-this-content]
+  other = 'Suka Konten Ini?'
+
+[june.support-text]
+  other = 'Dukung saya melalui {{ . }}, atau lanjut baca konten saya yang lainnya. Bentuk dukungan apapun saya hargai!'
+
+[june.drop-your-comment]
+  other = 'Tulis komentar anda di bawah'

@@ -18,3 +18,12 @@
 
 [june.read-more]
   other = 'さらに読む'
+
+[june.love-this-content]
+  other = 'このコンテンツが好きですか？'
+
+[june.support-text]
+  other = '{{ . }} を介して私をサポートしてください。または、別のコンテンツを読み続けてください。 どんなサポートも大歓迎です！'
+
+[june.drop-your-comment]
+  other = '以下にコメントをしてください'

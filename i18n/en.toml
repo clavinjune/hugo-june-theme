@@ -18,3 +18,12 @@
 
 [june.read-more]
   other = 'Read More'
+
+[june.love-this-content]
+  other = 'Love This Content?'
+
+[june.support-text]
+  other = 'Kindly support me via {{ . }}, or just continue to read another content. Any kind of supports is greatly appreciated!'
+
+[june.drop-your-comment]
+  other = 'Drop Your Comment Below'

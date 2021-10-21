@@ -5,6 +5,6 @@
 {{ end }}
 
 {{ with $paths }}
-<h2 class="subtitle">Love My Content?</h2>
-<div class="fg-light support-me">Kindly support me via {{ delimit $paths ", " }}, or just continue to read another content.  Any kind of supports is greatly appreciated!</div>
+<h2 class="subtitle">{{ i18n "june.love-this-content" }}</h2>
+<div class="fg-light support-me">{{ i18n "june.support-text" (delimit $paths ", ") | safeHTML }}</div>
 {{ end }}
