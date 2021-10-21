@@ -1,0 +1,10 @@
+{{- $paths := slice -}}
+{{ range .Site.Params.June.Support }}
+    {{ $c := printf "<a rel=\"noopener\" target=\"_blank\" class=\"fg-bold bottom-red\" href=\"%s\">%s</a>" .URL .Name }}
+    {{ $paths = $paths | append $c }}
+{{ end }}
+
+{{ with $paths }}
+<h2 class="subtitle">Love My Content?</h2>
+<div class="fg-light support-me">Kindly support me via {{ delimit $paths ", " }}, or just continue to read another content.  Any kind of supports is greatly appreciated!</div>
+{{ end }}

@@ -22,6 +22,18 @@ main.single {
       line-height: 32px;
     }
   }
+  
+  & > h2.subtitle {
+    font-family: $roboto-condensed;
+    font-size: 32px;
+    font-weight: bolder;
+    line-height: 38px;
+
+    @media #{$phone-portrait} {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
 
   & > div.metadata { 
     display: grid;
@@ -151,5 +163,19 @@ main.single {
     justify-content: center;
     line-height: 40px;
     user-select: none;
+  }
+
+  & > div.related {
+    display: grid;
+
+    & > a {
+      width: max-content;
+    }
+  }
+
+  & > div.support-me {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 32px;
   }
 }

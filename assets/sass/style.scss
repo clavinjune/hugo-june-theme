@@ -33,7 +33,7 @@ a {
 .bottom-red { border-bottom: solid 2px $red }
 .fg-black { color: $black }
 
-.fg-bold { font-weight: bolder }
+.fg-bold { font-weight: 800 !important }
 .fg-light { font-weight: lighter }
 
 .font-16 {

@@ -33,13 +33,20 @@
         <span>&middot;</span>
     </div>
     
+    {{/*
     {{- $related := .Site.RegularPages.Related . | first 2 -}}
     {{ with $related }}
-        <span>Related Articles</span>
-        {{ range . }}
-        <a class="link" href="{{ .RelPermalink }}">{{.Title}}</a>
-        {{ end }}
+        <h2 class="subtitle">Related Articles</h2>
+        <div class="related">
+            {{ range . }}
+            <a class="fg-bold bottom-red" href="{{ .RelPermalink }}">{{.Title}}</a>
+            {{ end }}
+        </div>
     {{ end }}
+    */}}
+    {{- partial "support-me.html" . -}}
+
+    <h2 class="subtitle">Drop Your Comments Below</h2>
 </main>
 {{ end }}
 
