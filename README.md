@@ -7,21 +7,32 @@
 
 ![Hugo June Theme Example](https://hugo.ClavinJune.dev/images/example.png)
 
-Hugo June is a theme that created to serve multilingual personal site and blog. The design itself is created by [Jessi](https://munyaaa.github.io/) and implemented by [Clavin June](https://clavinjune.dev). By default, Hugo June has supported English, Indonesian, and Japanese. All the configuration could be modified by adjusting the built-in `config file`, `i18n directory`, and `data directory`.
+Hugo June is a theme that created to serve multilingual personal site and blog. The design itself is created by [Jessi](https://munyaaa.github.io/) and implemented by [Clavin June](https://clavinjune.dev). By default, Hugo June has supported English, Indonesian, and Japanese. All the configuration could be modified by adjusting the built-in `config file`, `i18n directory`, and `data directory`. See Demo [here](https://clavinjune.dev)
 
 ## Features
 
-- Skip to Content Button
-- Multilingual
-- Google Site Verification Meta Tag
-- Web Monetization Meta Tag
+- Blog
 - Brave Rewards Verification File
-- Minimalist
-- Simple
-- Responsive
-- Custom Shortcodes
 - Content Security Policy Support
+- Custom Shortcodes
 - Giscus Support Comment Section
+- Google Site Verification Meta Tag
+- Minimalist
+- Multilingual
+- Responsive
+- Simple
+- Skip to Content Button
+- Web Monetization Meta Tag
+
+## Usage
+
+```bash
+# add theme as submodule
+$ git submodule add https://github.com/ClavinJune/hugo-june-theme themes/june
+
+# or clone
+$ git clone https://github.com/ClavinJune/hugo-june-theme themes/june
+```
 
 ## Config Example
 
@@ -151,7 +162,7 @@ theme = 'june'
   [params.june]
     braveRewardsVerification = 'ze0dec1b3acfbd430cac887ce390fdefcb56679334fcd39bc49d434660a52e26c'
     canonicalURL = 'XXXXX'
-    csp = "default-src 'self' 'unsafe-inline' https:; object-src 'none'; style-src 'self' 'unsafe-inline' fonts.googleapis.com github.githubassets.com; font-src fonts.gstatic.com; script-src 'self' 'unsafe-inline' www.googletagmanager.com gist.github.com giscus.app; base-uri 'none'; img-src 'self' images.unsplash.com;"
+    csp = "default-src 'self' 'unsafe-inline' https:;"
     googleSiteVerification = 'XXXXX'
     monetization = '$ilp.uphold.com/XXXXX'
 

@@ -14,11 +14,7 @@
 <meta name=twitter:title content="Hugo June Theme">
 <meta name=twitter:description content="A simple multilingual personal site and blogs">
 <title>Hugo June Theme</title>
-<link rel=preload href=https://unpkg.com/@primer/css@^16.0.0/dist/primer.css as=style onload="this.onload=null,this.rel='stylesheet'">
-<noscript>
 <link rel=stylesheet href=https://unpkg.com/@primer/css@^16.0.0/dist/primer.css>
-</noscript>
-
 <link rel=apple-touch-icon sizes=180x180 href=https://gohugo.io//apple-touch-icon.png>
 <link rel=icon type=image/png href=https://gohugo.io/favicon-32x32.png sizes=32x32>
 <link rel=icon type=image/png href=https://gohugo.io//favicon-16x16.png sizes=16x16>
@@ -31,22 +27,29 @@
 <a href=https://github.com/ClavinJune/hugo-june-theme/blob/master/LICENSE><img src=https://img.shields.io/github/license/ClavinJune/hugo-june-theme alt=GitHub></a>
 <a href=https://github.com/ClavinJune/hugo-june-theme><img src="https://img.shields.io/static/v1?label=Work+In+Progress&message=true&color=green&logo=github" alt="Work In Progress"></a></p>
 <p><img src=https://hugo.ClavinJune.dev/images/example.png alt="Hugo June Theme Example"></p>
-<p>Hugo June is a theme that created to serve multilingual personal site and blog. The design itself is created by <a href=https://munyaaa.github.io/>Jessi</a> and implemented by <a href=https://clavinjune.dev>Clavin June</a>. By default, Hugo June has supported English, Indonesian, and Japanese. All the configuration could be modified by adjusting the built-in <code>config file</code>, <code>i18n directory</code>, and <code>data directory</code>.</p>
+<p>Hugo June is a theme that created to serve multilingual personal site and blog. The design itself is created by <a href=https://munyaaa.github.io/>Jessi</a> and implemented by <a href=https://clavinjune.dev>Clavin June</a>. By default, Hugo June has supported English, Indonesian, and Japanese. All the configuration could be modified by adjusting the built-in <code>config file</code>, <code>i18n directory</code>, and <code>data directory</code>.</p>See Demo <a href=https://clavinjune.dev>here</a></p>
 <h2 id=features>Features</h2>
 <ul>
-<li>Skip to Content Button</li>
-<li>Multilingual</li>
-<li>Google Site Verification Meta Tag</li>
-<li>Web Monetization Meta Tag</li>
+<li>Blog</li>
 <li>Brave Rewards Verification File</li>
-<li>Minimalist</li>
-<li>Simple</li>
-<li>Responsive</li>
-<li>Custom Shortcodes</li>
 <li>Content Security Policy Support</li>
+<li>Custom Shortcodes</li>
 <li>Giscus Support Comment Section</li>
+<li>Google Site Verification Meta Tag</li>
+<li>Minimalist</li>
+<li>Multilingual</li>
+<li>Responsive</li>
+<li>Simple</li>
+<li>Skip to Content Button</li>
+<li>Web Monetization Meta Tag</li>
 </ul>
-<h2 id=config-example>Config Example</h2>
+<h2 id=usage>Usage</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># add theme as submodule</span>
+$ git submodule add https://github.com/ClavinJune/hugo-june-theme themes/june
+
+<span style=color:#75715e># or clone</span>
+$ git clone https://github.com/ClavinJune/hugo-june-theme themes/june
+</code></pre></div><h2 id=config-example>Config Example</h2>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>baseURL</span> = <span style=color:#e6db74>&#39;https://clavinjune.dev&#39;</span>
 <span style=color:#a6e22e>canonifyURLs</span> = <span style=color:#66d9ef>true</span>
 <span style=color:#a6e22e>enableEmoji</span> = <span style=color:#66d9ef>true</span>
@@ -172,7 +175,7 @@
   [<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>june</span>]
     <span style=color:#a6e22e>braveRewardsVerification</span> = <span style=color:#e6db74>&#39;ze0dec1b3acfbd430cac887ce390fdefcb56679334fcd39bc49d434660a52e26c&#39;</span>
     <span style=color:#a6e22e>canonicalURL</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
-    <span style=color:#a6e22e>csp</span> = <span style=color:#e6db74>&#34;default-src &#39;self&#39; &#39;unsafe-inline&#39; https:; object-src &#39;none&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39; fonts.googleapis.com github.githubassets.com; font-src fonts.gstatic.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; www.googletagmanager.com gist.github.com giscus.app; base-uri &#39;none&#39;; img-src &#39;self&#39; images.unsplash.com;&#34;</span>
+    <span style=color:#a6e22e>csp</span> = <span style=color:#e6db74>&#34;default-src &#39;self&#39; &#39;unsafe-inline&#39; https:;&#34;</span>
     <span style=color:#a6e22e>googleSiteVerification</span> = <span style=color:#e6db74>&#39;XXXXX&#39;</span>
     <span style=color:#a6e22e>monetization</span> = <span style=color:#e6db74>&#39;$ilp.uphold.com/XXXXX&#39;</span>
 

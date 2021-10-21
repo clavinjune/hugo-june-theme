@@ -16,8 +16,17 @@ tags = [
 ]
 features = [
   "blog",
+  "brave rewards verification file",
+  "content security policy support",
+  "custom shortcodes",
+  "giscus support comment section",
+  "google site verification meta tag",
+  "minimalist",
   "multilingual",
-  "skip-to-content"
+  "responsive",
+  "simple",
+  "skip-to-content button",
+  "web monetization meta tag"
 ]
 min_version = "0.88.1"
 
