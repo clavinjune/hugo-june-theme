@@ -1,6 +1,6 @@
 {{- $paths := slice -}}
 {{ range .Site.Params.June.Support }}
-    {{ $c := printf "<a rel=\"noopener\" target=\"_blank\" class=\"fg-bold bottom-red\" href=\"%s\">%s</a>" .URL .Name }}
+    {{ $c := printf "<a rel=\"noreferrer noopener\" target=\"_blank\" class=\"fg-bold bottom-red\" href=\"%s\">%s</a>" .URL .Name }}
     {{ $paths = $paths | append $c }}
 {{ end }}
 

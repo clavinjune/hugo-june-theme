@@ -22,6 +22,7 @@
 
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />  
 <meta property="og:locale" content="{{ .Site.Params.Locale }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 

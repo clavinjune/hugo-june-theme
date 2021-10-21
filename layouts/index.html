@@ -22,7 +22,7 @@
     <div class="introduction fg-light" id="reach-me-on"> {{ i18n "june.reach-me-on" }}</div>
     <div class="introduction" id="contact-list">
     {{ range .Site.Params.June.Contact }}
-        <a class="bottom-red fg-bold" rel="noopener" href="{{ .URL }}" target="_blank">{{ .Name }}</a>
+        <a class="bottom-red fg-bold" rel="noreferrer noopener" href="{{ .URL }}" target="_blank">{{ .Name }}</a>
     {{ end }}
     </div>
 </main>
