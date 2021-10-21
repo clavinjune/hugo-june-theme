@@ -45,7 +45,10 @@
     {{ end }}
     */}}
     {{- partial "support-me.html" . -}}
-    {{- partial "giscus.html" . -}}
+
+    {{ if not .Params.IsArchived }}
+        {{- partial "giscus.html" . -}}
+    {{ end }}
 </script>
 </main>
 {{ end }}
