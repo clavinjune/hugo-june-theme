@@ -39,11 +39,7 @@
 {{ $style := resources.Get "sass/style.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-{{- with .Site.GoogleAnalytics -}}
-<link rel="preconnect" href="https://www.googletagmanager.com">
-{{- end -}}
 
 {{ with .OutputFormats.Get "rss" }}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
