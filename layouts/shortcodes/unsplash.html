@@ -14,7 +14,10 @@
 {{ $src240 := printf "https://images.unsplash.com/%s?w=240&q=%s" $src $q}}
 {{ $src300 := printf "https://images.unsplash.com/%s?w=300&q=%s" $src $q}}
 {{ $src480 := printf "https://images.unsplash.com/%s?w=480&q=%s" $src $q}}
+{{ $src768 := printf "https://images.unsplash.com/%s?w=768&q=%s" $src $q}}
 {{ $src800 := printf "https://images.unsplash.com/%s?w=800&q=%s" $src $q}}
+{{ $src960 := printf "https://images.unsplash.com/%s?w=960&q=%s" $src $q}}
+{{ $src1024 := printf "https://images.unsplash.com/%s?w=1024&q=%s" $src $q}}
 {{ $src1200 := printf "https://images.unsplash.com/%s?w=1200&q=%s" $src $q}}
 {{ $src1366 := printf "https://images.unsplash.com/%s?w=1366&q=%s" $src $q}}
 {{ $src1920 := printf "https://images.unsplash.com/%s?w=1920&q=%s" $src $q}}
@@ -27,7 +30,10 @@
     {{ $src240 | safeURL }} 240w,
     {{ $src300 | safeURL }} 300w,
     {{ $src480 | safeURL }} 480w,
+    {{ $src768 | safeURL }} 768w,
     {{ $src800 | safeURL }} 800w,
+    {{ $src960 | safeURL }} 960w,
+    {{ $src1024 | safeURL }} 1024w,
     {{ $src1200 | safeURL }} 1200w,
     {{ $src1366 | safeURL }} 1366w,
     {{ $src1920 | safeURL }} 1920w
