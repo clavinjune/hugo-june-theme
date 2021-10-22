@@ -1,45 +1,28 @@
-{{- $src := .Get "src" -}}
-
 {{- $user := .Get "user" -}}
 {{- if (and $user (not (hasPrefix $user "@"))) -}}
   {{- $user = printf "@%s" $user -}}
 {{- end -}}
 
-{{- $q := .Get "q" -}}
-{{- if not $q -}}
-  {{- $q = "50" -}}
-{{- end -}}
+{{- $q := cond (not (.Get "q")) "50" (.Get "q") -}}
+{{- $s := .Get "src" -}}
+{{ $url := printf "https://images.unsplash.com/%s?q=%s" $s $q}}
 
-{{ $userRef := printf "<a class=\"link unsplash-ref\" rel=\"noreferrer nofollow noopener\" target=\"_blank\" href=\"https://unsplash.com/%s\">%s</a>" $user $user }}
-{{ $src240 := printf "https://images.unsplash.com/%s?w=240&q=%s" $src $q}}
-{{ $src300 := printf "https://images.unsplash.com/%s?w=300&q=%s" $src $q}}
-{{ $src480 := printf "https://images.unsplash.com/%s?w=480&q=%s" $src $q}}
-{{ $src768 := printf "https://images.unsplash.com/%s?w=768&q=%s" $src $q}}
-{{ $src800 := printf "https://images.unsplash.com/%s?w=800&q=%s" $src $q}}
-{{ $src960 := printf "https://images.unsplash.com/%s?w=960&q=%s" $src $q}}
-{{ $src1024 := printf "https://images.unsplash.com/%s?w=1024&q=%s" $src $q}}
-{{ $src1200 := printf "https://images.unsplash.com/%s?w=1200&q=%s" $src $q}}
-{{ $src1366 := printf "https://images.unsplash.com/%s?w=1366&q=%s" $src $q}}
-{{ $src1920 := printf "https://images.unsplash.com/%s?w=1920&q=%s" $src $q}}
+{{- $ws := slice "240" "300" "360" "480" "768" "800" "960" "1024" "1080" "1200" "1366" "1920" -}}
+{{- $srcset := slice -}}
+{{ range $ws }}
+  {{ $srcset = $srcset | append (printf "%s&w=%s %sw" $url . . | safeURL) }}
+{{ end }}
+
+{{ $srcLast := (index (split (index $srcset (sub (len $srcset) 1)) " ") 0) }}
+
+{{ $set := delimit $srcset "," }}
 {{ $alt := printf "Photo by %s on Unsplash" $user}}
+{{ $userRef := printf "<a class=\"link unsplash-ref\" rel=\"noreferrer nofollow noopener\" target=\"_blank\" href=\"https://unsplash.com/%s\">%s</a>" $user $user }}
 {{ $cap := printf "Photo by %s on Unsplash" $userRef}}
-
 <figure>
   <img
-    srcset="
-    {{ $src240 | safeURL }} 240w,
-    {{ $src300 | safeURL }} 300w,
-    {{ $src480 | safeURL }} 480w,
-    {{ $src768 | safeURL }} 768w,
-    {{ $src800 | safeURL }} 800w,
-    {{ $src960 | safeURL }} 960w,
-    {{ $src1024 | safeURL }} 1024w,
-    {{ $src1200 | safeURL }} 1200w,
-    {{ $src1366 | safeURL }} 1366w,
-    {{ $src1920 | safeURL }} 1920w
-    "
-    
+    srcset="{{ $set }}"
     sizes="(max-width: 480px) 480px, 100vw"
-    src="{{ $src1920 | safeURL }}" alt="{{ $alt }}" title="{{ $alt }}" width="100%" height="auto"/>
+    src="{{ $srcLast }}" alt="{{ $alt }}" title="{{ $alt }}" width="100%" height="auto"/>
   <figcaption class="font-16">{{ safeHTML $cap }}</figcaption>
 </figure>
