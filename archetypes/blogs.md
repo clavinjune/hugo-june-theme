@@ -11,7 +11,7 @@ description: >
   description
 ---
 
-{{< unsplash user="@aronvisuals" src="photo-1501139083538-0139583c060f" w="1920" q="50" >}}
+{{< unsplash user="@aronvisuals" src="photo-1501139083538-0139583c060f" q="50" >}}
 
 ## Introduction
 
