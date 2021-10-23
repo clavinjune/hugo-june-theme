@@ -134,6 +134,8 @@ main.single {
         -ms-overflow-style: none;
 
         &::-webkit-scrollbar { display: none }
+
+        & > table > tbody > tr > td:first-child > pre > code > span { color: $black-08 !important }
       }
 
       & > div.copy-button {
@@ -156,19 +158,12 @@ main.single {
           font-size: 14px;
           line-height: 24px;
         }
-
-        & a[href^="#"] { color: $black !important }
       }
     }
 
     & > figure {
       margin: 0;
       padding: 0;
-
-      & > img {
-        max-width: 100%;
-        width: 100%;
-      }
 
       & > figcaption {
         color: $black-0675;

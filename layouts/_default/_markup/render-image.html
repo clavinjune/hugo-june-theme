@@ -4,6 +4,6 @@
 {{end}}
 
 <figure>
-  <img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" title="{{ $title }}" width="480px" height="auto" />
+  <img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" title="{{ $title }}" width="100%" height="auto" />
   <figcaption>{{ safeHTML .Text }}</figcaption>
 </figure>
