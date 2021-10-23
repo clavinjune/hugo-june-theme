@@ -148,9 +148,16 @@ main.single {
 
       & code {
         font-family: $fira;
-        font-size: 12px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 28px;
         margin-right: 10px;
+
+        @media #{$phone-portrait} {
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        & a[href^="#"] { color: $black !important }
       }
     }
 
@@ -158,11 +165,16 @@ main.single {
       margin: 0;
       padding: 0;
 
+      & > img {
+        max-width: 100%;
+        width: 100%;
+      }
+
       & > figcaption {
         color: $black-0675;
         font-family: $roboto-condensed;
         font-style: italic;
-        margin-top: .5em;
+        margin-top: 1em;
         text-align: center;
       }
     }
