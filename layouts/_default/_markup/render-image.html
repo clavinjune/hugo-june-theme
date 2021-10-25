@@ -1,7 +1,4 @@
-{{- $title := .Title -}}
-{{ if not .Title}}
-  {{ $title = .PlainText }}
-{{end}}
+{{- $title := cond (not (.Title)) .PlainText (.Title) -}}
 
 <figure>
   <img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" title="{{ $title }}" width="100%" height="auto" />
