@@ -1,5 +1,4 @@
-{{ $src := .Get "src" }}
-{{ $img := resources.GetMatch $src }}
+{{ $img := resources.GetMatch (.Get "src") }}
 
 {{- $ws := slice 240 300 360 480 768 800 960 1024 1080 1200 1366 1920 -}}
 {{- $srcset := slice -}}
@@ -11,7 +10,6 @@
   {{ end }}
 {{ end }}
 
-{{ $srcLast := (index (split (index $srcset (sub (len $srcset) 1)) " ") 0) }}
 {{ $set := delimit $srcset "," }}
 
 
@@ -22,6 +20,6 @@
   <img
     srcset="{{ $set }}"
     sizes="(max-width: 480px) 480px, 100vw"
-    src="{{ $src }}" alt="{{ $alt }}" title="{{ $title }}" width="100%" height="auto"/>
+    src="{{ $img.RelPermalink }}" alt="{{ $alt }}" title="{{ $title }}" width="100%" height="auto"/>
   <figcaption class="font-16">{{$alt}}</figcaption>
 </figure>
