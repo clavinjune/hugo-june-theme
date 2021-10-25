@@ -59,6 +59,8 @@ main.single {
     margin-top: 20px;
     max-width: 100%;
 
+    & li { word-break: break-word }
+
     & p, li {
       font-size: 20px;
       line-height: 40px;
