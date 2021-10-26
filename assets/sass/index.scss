@@ -3,7 +3,8 @@
 @import "_media-queries.scss";
 
 main.index {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0px 20%;
   
