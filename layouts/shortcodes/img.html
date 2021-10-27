@@ -1,6 +1,7 @@
 {{ $img := resources.GetMatch (.Get "src") }}
 
-{{- $ws := slice 240 300 360 480 768 800 960 1024 1080 1200 1366 1920 -}}
+{{- $ws := slice 240 300 360 480 768 800 960 1024 1080 1200 1366 1920 $img.Width -}}
+
 {{- $srcset := slice -}}
 {{ range $ws }}
   {{ if (le . $img.Width) }}
@@ -20,6 +21,6 @@
   <img
     srcset="{{ $set }}"
     sizes="(max-width: 480px) 480px, 100vw"
-    src="{{ $img.RelPermalink }}" alt="{{ $alt }}" title="{{ $title }}" width="100%" height="auto"/>
-  <figcaption class="font-16">{{$alt}}</figcaption>
+    src="{{ $img.RelPermalink }}" alt="{{ $alt | safeHTML }}" title="{{ $title | safeHTML }}" width="100%" height="auto"/>
+  <figcaption class="font-16">{{$alt | safeHTML }}</figcaption>
 </figure>
