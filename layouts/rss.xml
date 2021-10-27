@@ -24,6 +24,8 @@
     <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
     {{- with .OutputFormats.Get "RSS" -}}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ printf "<link href=%q rel=\"self\" xmlns=\"http://www.w3.org/2005/Atom\"  />" .Permalink | safeHTML }}
+    {{ with $.Site.Params.June.superfeedrURL }}<link href="{{ . }}" rel="hub" xmlns="http://www.w3.org/2005/Atom" /> {{ end }}
     {{- end -}}
     {{ range $pages }}
     <item>
@@ -35,5 +37,6 @@
       <description>{{ .Description | html }}</description>
     </item>
     {{ end }}
+
   </channel>
 </rss>
