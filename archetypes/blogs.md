@@ -15,6 +15,16 @@ description: >
 
 ## Introduction
 
-Occaecat culpa cillum excepteur amet culpa minim qui nostrud culpa proident. Voluptate minim enim quis sit ut incididunt officia enim proident quis. Id laborum nulla sit aute id et consequat sit cillum.
+Every article should have a 1-3 paragraph introduction. A good intro needs to answer a few questions right away:
+
+1. What’s the paint point I’m addressing here? How do I hook my readers?
+2. What’s the solution to this problem?
+3. What am I going to do in this article?
+
+Make sure your introduction is completed by letting the user know how you’re going to teach them to solve this pain point.
+
+## Conclusion
+
+Every article should include a 1-2 paragraph conclusion. This should restate the thesis of the article and remind readers what they learned. It may also include other resources readers can reference to learn more.
 
 Thank you for reading!
