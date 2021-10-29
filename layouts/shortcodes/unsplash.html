@@ -7,9 +7,9 @@
 {{- $s := .Get "src" -}}
 {{ $url := printf "https://images.unsplash.com/%s?q=%s" $s $q}}
 
-{{- $ws := slice 240 300 360 480 768 800 960 1024 1080 1200 1366 1920 -}}
+{{- $ws := uniq (slice 240 300 360 480 768 800 960 1024 1080 1200 1366 1920) -}}
 {{- $srcset := slice -}}
-{{ range $ws }}
+{{ range sort $ws }}
   {{ $srcset = $srcset | append (printf "%s&w=%d %dw" $url . . | safeURL) }}
 {{ end }}
 

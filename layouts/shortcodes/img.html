@@ -1,9 +1,9 @@
 {{ $img := resources.GetMatch (.Get "src") }}
 
-{{- $ws := slice 240 300 360 480 768 800 960 1024 1080 1200 1366 1920 $img.Width -}}
+{{- $ws := uniq (slice 240 300 360 480 768 800 960 1024 1080 1200 1366 1920 $img.Width) -}}
 
 {{- $srcset := slice -}}
-{{ range $ws }}
+{{ range sort $ws }}
   {{ if (le . $img.Width) }}
     {{ $w := printf "%dx webp q50" . }}
     {{ $url := printf "%s %dw" (($img.Resize $w).RelPermalink | safeURL) . }}
