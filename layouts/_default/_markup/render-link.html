@@ -1,1 +1,7 @@
-<a class="link" {{ if not (hasPrefix .Destination "#") }} rel="noreferrer noopener" target="_blank" {{ end }} href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .PlainText | safeHTML }}</a>
+{{- $rel := "" -}}
+
+{{- if (hasPrefix .Destination "https") -}}
+    {{- $rel = "nofollow" -}}
+{{- end -}}
+
+<a class="link" {{ with $rel }} rel="{{ . }}" {{ end }} {{ if not (hasPrefix .Destination "#") }} rel="{{ $rel }} noreferrer noopener" target="_blank" {{ end }} href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .PlainText | safeHTML }}</a>
