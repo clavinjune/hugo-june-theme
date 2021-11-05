@@ -8,6 +8,12 @@
 {{ $style := resources.Get "sass/single.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+
+{{ $cat := "other" }}
+{{ with .Params.Categories }}{{ $cat = (index . 0) }}{{ end }}
+{{ $catURL := printf "/categories/%s" $cat | urlize | relLangURL }}
+
+{{ if (eq $cat "sponsored") }}<meta property="cr:sponsored" />{{ end }}
 {{ end }}
 
 {{ define "main" }}
