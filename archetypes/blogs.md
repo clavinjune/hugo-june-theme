@@ -7,8 +7,7 @@ isarchived: false
 categories: ["other"]
 images: ["https://images.unsplash.com/photo-1501139083538-0139583c060f?w=1920&q=50"]
 aliases: []
-description: >
-  description
+description: "description"
 ---
 
 {{< unsplash user="@aronvisuals" src="photo-1501139083538-0139583c060f" q="50" >}}
