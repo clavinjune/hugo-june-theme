@@ -16,7 +16,7 @@ description: "description"
 
 Every article should have a 1-3 paragraph introduction. A good intro needs to answer a few questions right away:
 
-1. What’s the paint point I’m addressing here? How do I hook my readers?
+1. What’s the pain point I’m addressing here? How do I hook my readers?
 2. What’s the solution to this problem?
 3. What am I going to do in this article?
 

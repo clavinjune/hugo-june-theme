@@ -1,1 +1,1 @@
-<a class="link" rel="nofollow noreferrer noopener" {{ if not (hasPrefix .Destination "#") }} target="_blank" {{ end }} href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .PlainText | safeHTML }}</a>
+<a class="link" rel="nofollow noreferrer noopener" {{ if not (hasPrefix .Destination "#") }} target="_blank" {{ end }} href="{{ .Destination | relLangURL | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .PlainText | safeHTML }}</a>
