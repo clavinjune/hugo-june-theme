@@ -6,7 +6,7 @@
 {{ range sort $ws }}
   {{ if (le . $img.Width) }}
     {{ $w := printf "%dx webp q50" . }}
-    {{ $url := printf "%s %dw" (($img.Resize $w).RelPermalink | safeURL) . }}
+    {{ $url := printf "%s %dw" (($img.Resize $w).RelPermalink | absURL | safeURL) . }}
     {{ $srcset = $srcset | append $url }}
   {{ end }}
 {{ end }}
@@ -21,6 +21,6 @@
   <img
     srcset="{{ $set }}"
     sizes="(max-width: 480px) 480px, 100vw"
-    src="{{ $img.RelPermalink }}" alt="{{ $alt | safeHTML }}" title="{{ $title | safeHTML }}" width="100%" height="auto"/>
+    src="{{ $img.RelPermalink | absURL | safeURL }}" alt="{{ $alt | safeHTML }}" title="{{ $title | safeHTML }}" width="100%" height="auto"/>
   <figcaption class="font-16">{{$alt | safeHTML }}</figcaption>
 </figure>
