@@ -16,6 +16,9 @@
 {{- with .googleSiteVerification }}
 <meta name="google-site-verification" content="{{ . }}" />
 {{- end }}
+{{- with .indieLoginURL }}
+<link rel="me" href="{{ . }}" />
+{{- end }}
 {{- with .monetization }}
 <meta name="monetization" content="{{ . }}" />
 {{- end }}
