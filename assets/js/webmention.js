@@ -219,7 +219,7 @@ A more detailed example:
         rsvp = `<sub>${rsvpEmoji[r.rsvp]}</sub>`;
       }
   
-      return`<a class="reaction" rel="nofollow ugc" title="${who} ${response}" href="${r[mentionSource]}">${authorPhoto} ${(reactEmoji[r['wm-property']] || '💥')} ${rsvp}</a>`;
+      return`<a target="_blank" class="fg-bold bottom-red reaction" rel="noreferrer noopener nofollow ugc" title="${who} ${response}" href="${r[mentionSource]}">${authorPhoto} ${(reactEmoji[r['wm-property']] || '💥')} ${rsvp}</a>`;
     }
   
     /**
@@ -293,7 +293,7 @@ A more detailed example:
           if (c.author && c.author.name) {
             source = entities(c.author.name);
           }
-          const link = `<a class="source" rel="nofollow ugc" href="${c[mentionSource]}">${source}</a>`;
+          const link = `<a target="_blank" class="fg-bold bottom-red source" rel="noreferrer noopener nofollow ugc" href="${c[mentionSource]}">${source}</a>`;
   
           let linkclass = "name";
           let linktext = `(${t("mention")})`;
