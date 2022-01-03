@@ -16,11 +16,21 @@
 {{- with .googleSiteVerification }}
 <meta name="google-site-verification" content="{{ . }}" />
 {{- end }}
-{{- with .indieLoginURL }}
-<link rel="me" href="{{ . }}" />
-{{- end }}
 {{- with .monetization }}
 <meta name="monetization" content="{{ . }}" />
+{{- end }}
+
+
+{{- with .webmention }}
+{{- with .LoginURL }}
+<link rel="me" href="{{ . }}" />
+{{- end }}
+{{- with .PingbackURL }}
+<link rel="pingback" href="{{ . }}" />
+{{- end }}
+{{- with .URL }}
+<link rel="webmention" href="{{ . }}" />
+{{- end }}
 {{- end }}
 {{- end }}
 
