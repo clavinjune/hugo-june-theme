@@ -52,6 +52,8 @@
     */}}
     {{- partial "support-me.html" . -}}
 
+    <div id="webmentions"></div>    
+
     {{ if not .Params.IsArchived }}
         {{- partial "giscus.html" . -}}
     {{ end }}
@@ -61,6 +63,9 @@
 
 {{ define "script" }}
 {{ $options := (dict "outputStyle" "compressed" "minify" true) }}
-{{ $js := resources.Get "js/copy.js" | js.Build $options | resources.ExecuteAsTemplate "js/copy.js" . }}
-<script defer type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+{{ $copy := resources.Get "js/copy.js" | js.Build $options | resources.ExecuteAsTemplate "js/copy.js" . }}
+<script defer type="text/javascript" src="{{ $copy.RelPermalink }}"></script>
+
+{{ $webmention := resources.Get "js/webmention.js" | js.Build $options | resources.ExecuteAsTemplate "js/webmention.js" . }}
+<script defer type="text/javascript" src="{{ $webmention.RelPermalink }}"></script>
 {{ end }}
