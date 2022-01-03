@@ -99,17 +99,17 @@ main.single {
       padding-inline-start: 40px;
     }
 
-    // & h2 {
-    //   font-family: $roboto-condensed;
-    //   font-size: 32px;
-    //   font-weight: bolder;
-    //   line-height: 38px;
+    & h2 {
+      font-family: $roboto-condensed;
+      font-size: 32px;
+      font-weight: bolder;
+      line-height: 38px;
 
-    //   @media #{$phone-portrait} {
-    //     font-size: 24px;
-    //     line-height: 28px;
-    //   }
-    // }
+      @media #{$phone-portrait} {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
 
     & h3 {
       font-family: $roboto-condensed;
