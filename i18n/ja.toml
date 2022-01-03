@@ -22,8 +22,14 @@
 [june.love-this-content]
   other = 'このコンテンツが好きですか？'
 
+[june.support-text-default]
+  other = 'どんなサポートも大歓迎です！'
+
 [june.support-text]
-  other = '{{ . }} を介して私をサポートしてください。または、別のコンテンツを読み続けてください。 どんなサポートも大歓迎です！'
+  other = '{{ . }} を介して私をサポートしてください。または、別のコンテンツを読み続けてください。'
+
+[june.webmention-text]
+  other = '<a class="fg-bold bottom-red" rel="noreferrer nofollow noopener" href="https://webmention.io/" target="_blank">Webmention</a>を介して応答を記述し、<a class="fg-bold bottom-red" rel="noreferrer nofollow noopener" href="https://telegraph.p3k.io/send-a-webmention" target="_blank">Telegraph</a>を介してURLを知らせてください。'
 
 [june.drop-your-comment]
   other = '以下にコメントをしてください'

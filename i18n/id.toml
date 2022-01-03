@@ -22,8 +22,14 @@
 [june.love-this-content]
   other = 'Suka Konten Ini?'
 
+[june.support-text-default]
+  other = 'Bentuk dukungan apapun saya hargai!'
+
 [june.support-text]
-  other = 'Dukung saya melalui {{ . }}, atau lanjut baca konten saya yang lainnya. Bentuk dukungan apapun saya hargai!'
+  other = 'Dukung saya melalui {{ . }}, atau lanjut baca konten saya yang lainnya.'
+  
+[june.webmention-text]
+  other = 'Kamu bisa menulis respon lewat <a class="fg-bold bottom-red" rel="noreferrer nofollow noopener" href="https://webmention.io/" target="_blank">Webmention</a> dan beritahu saya URLnya lewat <a class="fg-bold bottom-red" rel="noreferrer nofollow noopener" href="https://telegraph.p3k.io/send-a-webmention" target="_blank">Telegraph</a>.'
 
 [june.drop-your-comment]
   other = 'Tulis komentar anda di bawah'

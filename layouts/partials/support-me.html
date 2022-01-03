@@ -4,7 +4,15 @@
     {{ $paths = $paths | append $c }}
 {{ end }}
 
-{{ with $paths }}
-<h2 class="subtitle">{{ i18n "june.love-this-content" }}</h2>
-<div class="fg-light support-me">{{ i18n "june.support-text" (delimit $paths ", ") | safeHTML }}</div>
+{{- $wm := "" -}}
+{{ with .Site.Params.June.Webmention }}
+{{ $wm = i18n "june.webmention-text" | safeHTML }}
 {{ end }}
+
+{{- $p := "" -}}
+{{ with $paths }}
+{{ $p = i18n "june.support-text" (delimit $paths ", ") | safeHTML }}
+{{ end }}
+
+<h2 class="subtitle">{{ i18n "june.love-this-content" }}</h2>
+<div class="fg-light support-me">{{ i18n "june.support-text-default" }} {{ $p }} {{ $wm }}</div>
