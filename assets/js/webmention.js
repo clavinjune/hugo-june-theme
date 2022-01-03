@@ -210,9 +210,9 @@ A more detailed example:
       }
   
       let authorPhoto = '';
-      if (r.author && r.author.photo) {
-        authorPhoto = `<img src="${entities(r.author.photo)}" loading="lazy" decoding="async" alt="${who}">`;
-      }
+      // if (r.author && r.author.photo) {
+      //   authorPhoto = `<img src="${entities(r.author.photo)}" loading="lazy" decoding="async" alt="${who}">`;
+      // }
   
       let rsvp = '';
       if (r.rsvp && rsvpEmoji[r.rsvp]) {
