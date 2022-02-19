@@ -20,9 +20,11 @@
 {{ $userRef := printf "<a class=\"link unsplash-ref\" rel=\"noreferrer nofollow noopener\" target=\"_blank\" href=\"https://unsplash.com/%s\">%s</a>" $user $user }}
 {{ $cap := printf "Photo by %s on Unsplash" $userRef}}
 <figure>
-  <img
-    srcset="{{ $set }}"
-    sizes="(max-width: 200px) 200px, 100vw"
-    src="{{ $srcLast }}" alt="{{ $alt }}" title="{{ $alt }}" width="100%" height="auto"/>
+  <div class="img-box">
+    <img
+      srcset="{{ $set }}"
+      sizes="(max-width: 200px) 200px, 100vw"
+      src="{{ $srcLast }}" alt="{{ $alt }}" title="{{ $alt }}"/>
+  </div>
   <figcaption class="font-16">{{ safeHTML $cap }}</figcaption>
 </figure>

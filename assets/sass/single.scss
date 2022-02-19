@@ -171,6 +171,22 @@ main.single {
       margin: 0;
       padding: 0;
 
+      & > div.img-box {
+        & > img {
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+
+        background-color: $white;
+        height: 0;
+        overflow: hidden;
+        padding-top: 61.45%;
+        position: relative;
+      }
+
       & > figcaption {
         color: $black-0675;
         font-family: $roboto-condensed;
