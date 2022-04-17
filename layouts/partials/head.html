@@ -48,8 +48,8 @@
   {{- end }}
 {{- end}}
 
-{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "sass/style.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
+{{ $options := (dict "targetPath" "css/style.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/style.scss" | resources.ToCSS $options | fingerprint }}
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

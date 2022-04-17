@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
 </noscript>
 
-{{ $options := (dict "targetPath" "css/single.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "sass/single.scss" | resources.ToCSS $options | minify | fingerprint | resources.PostProcess }}
+{{ $options := (dict "targetPath" "css/single.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/single.scss" | resources.ToCSS $options | fingerprint }}
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
 
