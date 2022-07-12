@@ -19,6 +19,11 @@ body, html {
   padding: 0;
   scroll-behavior: smooth;
 
+  // iframe from cloudfront
+  & > iframe[style="border: none; visibility: hidden;"] {
+    position: absolute;
+  }
+
   @media #{$phone-portrait} {
     grid-row-gap: 8%;
   }
