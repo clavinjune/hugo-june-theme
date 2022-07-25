@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html{{ with .Site.Language.Lang | default site.Language.Lang }} lang="{{ . }}"{{ end }}>
+  <head>
+    <title>{{ .Permalink }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=https://go-talks.appspot.com/{{ .Site.Params.June.talksRepo }}/{{ .Name | urlize }}/index.slide#1">
+  </head>
+</html>
