@@ -30,6 +30,6 @@ features = [
 ]
 min_version = "0.88.1"
 
-[author]
+[[params.author]]
   name = "Clavin June"
   homepage = "https://clavinjune.dev"

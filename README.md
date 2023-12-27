@@ -154,11 +154,11 @@ theme = 'june'
       url = '/works/'
       weight = 4
 
-[author]
-  Name = "XXXXX"
-  Email = 'XXXXX'
-
 [params]
+  [params.author]
+    Name = "XXXXX"
+    Email = 'XXXXX'
+
   [params.june]
     braveRewardsVerification = 'ze0dec1b3acfbd430cac887ce390fdefcb56679334fcd39bc49d434660a52e26c'
     canonicalURL = 'XXXXX'
