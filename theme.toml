@@ -28,7 +28,7 @@ features = [
   "skip-to-content button",
   "web monetization meta tag"
 ]
-min_version = "0.88.1"
+min_version = "0.128.2"
 
 [[params.author]]
   name = "Clavin June"

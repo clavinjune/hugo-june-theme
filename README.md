@@ -1,6 +1,6 @@
 # Hugo June Theme
 
-[![Hugo Version](https://img.shields.io/static/v1?label=Hugo+Version&message=0.88.1&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.88.1)
+[![Hugo Version](https://img.shields.io/static/v1?label=Hugo+Version&message=0.128.2&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.128.2)
 [![Latest Release](https://img.shields.io/github/tag/ClavinJune/hugo-june-theme.svg)](https://github.com/ClavinJune/hugo-june-theme/releases/latest)
 [![GitHub](https://img.shields.io/github/license/ClavinJune/hugo-june-theme)](https://github.com/ClavinJune/hugo-june-theme/blob/master/LICENSE)
 [![Work In Progress](https://img.shields.io/static/v1?label=Work+In+Progress&message=true&color=green&logo=github)](https://github.com/ClavinJune/hugo-june-theme)
