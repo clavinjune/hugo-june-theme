@@ -1,6 +1,6 @@
 # Hugo June Theme
 
-[![Hugo Version](https://img.shields.io/static/v1?label=Hugo+Version&message=0.128.2&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.128.2)
+[![Hugo Version](https://img.shields.io/static/v1?label=Hugo+Version&message=0.145.0&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.145.0)
 [![Latest Release](https://img.shields.io/github/tag/ClavinJune/hugo-june-theme.svg)](https://github.com/ClavinJune/hugo-june-theme/releases/latest)
 [![GitHub](https://img.shields.io/github/license/ClavinJune/hugo-june-theme)](https://github.com/ClavinJune/hugo-june-theme/blob/master/LICENSE)
 [![Work In Progress](https://img.shields.io/static/v1?label=Work+In+Progress&message=true&color=green&logo=github)](https://github.com/ClavinJune/hugo-june-theme)
@@ -44,13 +44,22 @@ defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
 enableMissingTranslationPlaceholders = true
 enableRobotsTXT = true
-googleAnalytics = 'XXXXX'
 hasCJKLanguage = true
 languageCode = 'en-us'
-paginate = 5
 publishDir = 'docs'
 title = 'June Personal Web'
 theme = 'june'
+
+[pagination]
+  pagerSize = 5
+
+[services]
+  [services.googleAnalytics]
+    id = 'XXXXX'
+
+[privacy]
+  [privacy.googleAnalytics]
+    respectDoNotTrack = true
 
 [markup]
   [markup.tableOfContents]
