@@ -1,6 +1,6 @@
 {{ define "head"}}
 {{ $options := (dict "targetPath" "css/list.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "sass/list.scss" | resources.ToCSS $options | fingerprint }}
+{{ $style := resources.Get "sass/list.scss" | css.Sass $options | fingerprint }}
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
 
