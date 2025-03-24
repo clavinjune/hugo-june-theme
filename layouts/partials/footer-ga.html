@@ -1,6 +1,0 @@
-{{- with site.Config.Services.GoogleAnalytics.ID -}}
-{{ $options := (dict "outputStyle" "compressed" "minify" true) }}
-{{ $js := resources.Get "js/ga.js" | js.Build $options | resources.ExecuteAsTemplate "js/ga.js" . }}
-<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
-<script defer src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-{{- end -}}
