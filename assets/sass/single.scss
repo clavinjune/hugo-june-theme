@@ -195,6 +195,15 @@ main.single {
         text-align: center;
       }
     }
+
+    & > div.spotify {
+      color: $black-0675;
+      font-family: $roboto-condensed;
+      font-style: italic;
+      margin: 1em 0;
+      text-align: center;
+    }
+
   }
 
   & > div.separator {
@@ -222,4 +231,5 @@ main.single {
     font-style: italic;
     line-height: 32px;
   }
+
 }
